@@ -9,25 +9,19 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        primary: '#8B5A3C',
-        secondary: '#D4A574',
-        accent: '#E8B4A8',
-        light: '#F5F3F0',
-        dark: '#2C2C2C',
+        primary: '#7C4A29',
+        secondary: '#B38B62',
+        accent: '#F0E2CF',
+        light: '#FBF6EF',
+        dark: '#35271F',
+        cream: '#F6EEE4',
+        bronze: '#A67C52',
+      },
+      boxShadow: {
+        soft: '0 18px 50px -30px rgba(68, 44, 28, 0.24)',
       },
       fontFamily: {
         sans: ['system-ui', 'sans-serif'],
-      },
-      fontSize: {
-        xs: '0.75rem',
-        sm: '0.875rem',
-        base: '1rem',
-        lg: '1.125rem',
-        xl: '1.25rem',
-        '2xl': '1.5rem',
-        '3xl': '1.875rem',
-        '4xl': '2.25rem',
-        '5xl': '3rem',
       },
     },
   },
