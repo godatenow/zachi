@@ -5,7 +5,7 @@ import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
   title: 'צחי חן | מאמן יחסים ומחבר "מדייטים לאהבה"',
-  description: 'צחי חן מלווה אנשים לקשרים בריאים, בוגרים ויציבים — דרך כלים מעשיים, בהירות רגשית והבנה עמוקה של דפוסי בחירה. הכוונה מקצועית לבחירות רומנטיות בוגרות ובריאות.',
+  description: 'מלווה אנשים ליצירת קשרים בריאים, בוגרים ויציבים באמצעות כלים מעשיים, בהירות רגשית והבנה של דפוסי בחירה.',
   keywords: 'צחי חן, מאמן יחסים, מערכות יחסים, דייטים, אהבה, ספר יחסים, בריאות רגשית, בחירה רומנטית, דפוסי יחסים',
   authors: [{ name: 'צחי חן' }],
   creator: 'צחי חן',
@@ -21,9 +21,9 @@ export const metadata: Metadata = {
   },
   openGraph: {
     title: 'צחי חן | מאמן יחסים ומחבר "מדייטים לאהבה"',
-    description: 'הכוונה מקצועית לבחירות רומנטיות בוגרות ובריאות. כלים מעשיים לקשרים משמעותיים.',
+    description: 'כלים מעשיים ליחסים בריאים ובחירות רגשיות בוגרות.',
     url: 'https://zachi-hen.com', // TODO: Replace with actual domain
-    siteName: 'צחי חן - מאמן יחסים',
+    siteName: 'צחי חן',
     locale: 'he_IL',
     type: 'website',
     images: [
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'צחי חן | מאמן יחסים ומחבר "מדייטים לאהבה"',
-    description: 'הכוונה מקצועית לבחירות רומנטיות בוגרות ובריאות.',
+    description: 'כלים מעשיים ליחסים בריאים ובחירות רגשיות בוגרות.',
     images: ['/og-image.jpg'], // TODO: Add Twitter image
     creator: '@zachi_hen', // TODO: Replace with actual Twitter handle
   },

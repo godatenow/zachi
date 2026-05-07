@@ -37,7 +37,7 @@ export default function ArticleCard({
         </h3>
       </Link>
 
-      <p className="text-[#5c4b42] leading-[1.6] mb-6 line-clamp-3">
+      <p className="text-[#5c4b42] leading-[1.6] mb-6 max-h-[7.5rem] overflow-hidden">
         {excerpt}
       </p>
 
