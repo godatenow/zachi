@@ -1,120 +1,96 @@
 import { Metadata } from 'next';
 import BookCTA from '@/components/BookCTA';
+import CTAButton from '@/components/CTAButton';
 import { CONTACT_INFO, CTA_LABELS } from '@/constants/config';
 
 export const metadata: Metadata = {
   title: 'אודות - צחי חן',
-  description: 'קחו להכיר את צחי חן - מאמן יחסים, מחבר ודוד לאהבה וקשרים בריאים.',
+  description: 'להכיר את צחי חן: מאמן יחסים עם גישה ישרה, פרקטית ומנוסה לבחירות רומנטיות טובות יותר.',
 };
 
 export default function About() {
   return (
     <div>
-      {/* Hero Section */}
-      <section className="section-padding bg-gradient-to-l from-accent to-light">
-        <div className="container-main">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="text-4xl md:text-5xl font-bold text-dark mb-6">
-              אודות צחי חן
+      <section className="section-padding bg-[radial-gradient(circle_at_top_right,_rgba(183,134,96,0.18),_transparent_30%),linear-gradient(180deg,_#fbf6ef_0%,_#f3e8db_100%)]">
+        <div className="container-main grid gap-10 lg:grid-cols-[0.95fr_1.05fr] items-center">
+          <div>
+            <span className="inline-flex rounded-full bg-[#E7D0B8] px-4 py-2 text-sm font-semibold text-[#6F4632] mb-4">
+              אודות אישית ומקצועית
+            </span>
+            <h1 className="text-4xl sm:text-5xl font-semibold text-dark leading-tight mb-6">
+              צחי חן — הבטחה לבחור נכון, לא רק להרגיש נכון
             </h1>
-            <p className="text-xl text-gray-700">
-              מאמן יחסים, מחבר, ודוד לקשרים בריאים
+            <p className="text-lg text-gray-700 leading-8 max-w-3xl">
+              אני עוזר לאנשים לראות את הבחירה מאחוריה ולא רק את ההתרגשות. זה אומר להבין את הדפוסים, לבחור מתוך בהירות, ולבנות קשרים שלא נופלים בשלב הבא.
             </p>
           </div>
-        </div>
-      </section>
 
-      {/* Story Section */}
-      <section className="section-padding">
-        <div className="container-main">
-          <div className="max-w-3xl mx-auto prose prose-lg">
-            <h2 className="text-3xl font-bold text-dark mb-6">הסיפור שלי</h2>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              זה לא התחיל בטיפול או בהכשרה רשמית. זה התחיל בסערות שלי.
+          <div className="rounded-[2rem] border border-[#D6B48F] bg-white p-10 shadow-soft">
+            <h2 className="text-2xl font-semibold text-dark mb-4">יותר מעשור של ניסיון</h2>
+            <p className="text-gray-600 leading-7 mb-6">
+              לאורך השנים עבדתי עם רווקים, זוגות וגרושים שחיפשו דרך להפוך מערכת יחסים דינמית ובריאה למציאות יומיומית.
             </p>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              כמו כולם, ראיתי דייטים מהווים משהו דיו לשמחה. ראיתי קשרים שנשברו על דברים שאני חושב היו צריכים להיות פשוטים יותר. ראיתי עצמי עושה את אותם דברים שגויים שוב ושוב.
-            </p>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              אז התחלתי ללמוד. אמיתי. נתתי מעבר על הסלט - פסיכולוגיה של קשרים, כימיה, הפסיכוטיזם של אנשים, איך להיות מתוך עצמך כשאתה פחוד מעשות. כל דבר.
-            </p>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              וכשהתחלתי לשנות את הדרך שלי? כל דבר השתנה. הדייטים היו פחות דיוק. הקשרים היו עמוקים יותר. ההיכול שלי להיות לבדי למעשה היה טוב יותר.
-            </p>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              בשנים הבאות, זה נעשה אולם. אנשים התחילו לשאול אותי עצות. אני התחלתי לשאול ועשית עביד לאנשים שאני יודע. ושוב ושוב, אותם דפוסים צפו למעלה. אותם דברים עבדו.
-            </p>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              לכן כתבתי ספר. לא כי אני גניוס... כי עברתי את כל זה בעצמי, וזה עבד.
-            </p>
-
-            <h2 className="text-3xl font-bold text-dark mb-6 mt-12">מה אני עושה עכשיו</h2>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              עכשיו אני עובד עם אנשים שרוצים להבין את קשרים שלהם. לא כשהם משוגע. לא כשהם בדיוני שקר. כשהם מוכנים בעצם להשתנות.
-            </p>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              אני עוזר לאנשים לראות דפוסים בהם הם לא יכלו לראות את עצמם. אני עוזר להם להמנע מאנשים שאינם טובים לך. אני עוזר להם למצוא מישהו וקשר שאפילו בימים רעים, בסדר.
-            </p>
-
-            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              וזה בדיוק מה שאני רוצה לעשות מעכשיו ואילך.
-            </p>
-
-            <h2 className="text-3xl font-bold text-dark mb-6 mt-12">הערכים שלי</h2>
-
-            <div className="space-y-4 mb-8">
-              <div className="flex gap-4">
-                <span className="text-2xl text-primary flex-shrink-0">✓</span>
-                <div>
-                  <h3 className="font-bold text-lg text-dark mb-1">כנות</h3>
-                  <p className="text-gray-700">אני לא מאמין בחלקתו מים על ידי או בעיסוקי בעתיד. המציאות היא המציאות.</p>
-                </div>
+            <div className="space-y-4">
+              <div className="rounded-3xl border border-[#E5D0B8] bg-[#FBF2E6] p-5">
+                <strong className="block text-dark mb-1">גישה ברורה</strong>
+                <p className="text-sm text-gray-600 leading-6">בלי קלישאות, בלי הבטחות אלא על פעולה.</p>
               </div>
-              <div className="flex gap-4">
-                <span className="text-2xl text-primary flex-shrink-0">✓</span>
-                <div>
-                  <h3 className="font-bold text-lg text-dark mb-1">פרקטיקה</h3>
-                  <p className="text-gray-700">אני מלמד דברים שאתה יכול בעצם להשתמש. לא עיוני, לא בדונים מלמלים.</p>
-                </div>
+              <div className="rounded-3xl border border-[#E5D0B8] bg-[#FBF2E6] p-5">
+                <strong className="block text-dark mb-1">מיקוד בדפוסים</strong>
+                <p className="text-sm text-gray-600 leading-6">זה לא רק מי מגיע אליכם, אלא מה אתם מאפשרים לעצמכם לבחור.</p>
               </div>
-              <div className="flex gap-4">
-                <span className="text-2xl text-primary flex-shrink-0">✓</span>
-                <div>
-                  <h3 className="font-bold text-lg text-dark mb-1">יעיל הגנה</h3>
-                  <p className="text-gray-700">קשרים צריכים להיות טובים לך. חיים צריכים להיות טובים לך. אני כאן כדי לעזור בכך.</p>
-                </div>
+              <div className="rounded-3xl border border-[#E5D0B8] bg-[#FBF2E6] p-5">
+                <strong className="block text-dark mb-1">תוצאה בשטח</strong>
+                <p className="text-sm text-gray-600 leading-6">כיוון שמניב שיחות טובות יותר ובחירות שקיימות גם ביום שאחרי.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Book Section */}
+      <section className="section-padding">
+        <div className="container-main max-w-4xl mx-auto">
+          <h2 className="section-title">הדרך שלי</h2>
+          <div className="space-y-8 text-gray-700 leading-8">
+            <p>
+              אני לא בא כדי לספר לך מה צריך להרגיש. אני בא כדי להראות איך להגדיר בדייקנות מה חשוב לך, ובאיזה שיחה או דייט לא כדאי לך לבזבז את הזמן.
+            </p>
+            <p>
+              זה מתחיל בהבנה מעמיקה של הבחירות שלך: מה מושך אותך, מה משקף דפוסים ישנים, ומה יכול להוביל לשותפות שמרגישה בטוחה גם בשגרה.
+            </p>
+            <p>
+              הטיפול שלי הוא פרקטי. זה אומר שאחרי כל מפגש אתה יודע מה לצעוד הלאה, ואיפה כדאי לעצור. זה גם אומר שמי שרוצה יכול לקבל ליווי אישי שמבוסס על מקרים אמיתיים, לא על תיאוריות רחוקות.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section className="section-padding bg-cream">
+        <div className="container-main max-w-5xl mx-auto grid gap-6 lg:grid-cols-3">
+          <div className="rounded-[2rem] bg-white p-8 shadow-soft border border-[#E4D4C4]">
+            <h3 className="text-xl font-semibold text-dark mb-3">בחירות שקיימות</h3>
+            <p className="text-gray-600 leading-7">גישה שמאפשרת לבחור לא רק מתוך חשק, אלא מתוך סדר פרקטי שמחזיק גם אחרי הרגע הרומנטי.</p>
+          </div>
+          <div className="rounded-[2rem] bg-white p-8 shadow-soft border border-[#E4D4C4]">
+            <h3 className="text-xl font-semibold text-dark mb-3">בהירות רגשית</h3>
+            <p className="text-gray-600 leading-7">לפתח בהירות על מה באמת מוביל אותך היום ולמה זה לא תמיד מה שנראה בתמונה.</p>
+          </div>
+          <div className="rounded-[2rem] bg-white p-8 shadow-soft border border-[#E4D4C4]">
+            <h3 className="text-xl font-semibold text-dark mb-3">השפעה על יחס</h3>
+            <p className="text-gray-600 leading-7">להתחבר לדרך חדשה של שיחות שמייצרות אמון, ולא רק ריגוש רגעי.</p>
+          </div>
+        </div>
+      </section>
+
       <BookCTA />
 
-      {/* CTA Section */}
       <section className="section-padding bg-light">
         <div className="container-main text-center">
-          <h2 className="section-title">הבה נעבוד ביחד</h2>
-          <p className="text-lg text-gray-700 mb-8 max-w-2xl mx-auto">
-            זמינה השיחה הראשונה שלך כדי לדבר על מה שקורה בחיים הרומנטיים שלך.
+          <h2 className="section-title">רוצה לבדוק אם זה מתאים לך?</h2>
+          <p className="text-base text-gray-600 max-w-2xl mx-auto leading-7 mb-8">
+            השיחה הראשונה היא הזדמנות לגלות אם הדרך שלי יכולה לתת לך יותר בהירות ובחירות חכמות יותר.
           </p>
-          <a
-            href={CONTACT_INFO.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-primary inline-block"
-          >
-            {CTA_LABELS.scheduleCall}
-          </a>
+          <CTAButton href={CONTACT_INFO.whatsapp} label={CTA_LABELS.scheduleCall} variant="primary" external />
         </div>
       </section>
     </div>

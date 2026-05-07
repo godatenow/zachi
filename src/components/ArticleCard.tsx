@@ -19,42 +19,31 @@ export default function ArticleCard({
   readTime,
 }: ArticleCardProps) {
   return (
-    <article className="group bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-all duration-300">
-      {/* Category & Read Time */}
-      <div className="flex items-center justify-between gap-2 mb-3">
+    <article className="group rounded-[2rem] border border-[#E4D4C4] bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-secondary">
+      <div className="flex flex-col gap-3 mb-4">
         {category && (
-          <span className="text-sm font-semibold text-primary bg-light px-3 py-1 rounded-full">
+          <span className="inline-flex rounded-full bg-[#F5E5D6] px-3 py-1 text-xs font-semibold text-[#8B5A3C]">
             {category}
           </span>
         )}
         {readTime && (
-          <span className="text-sm text-gray-600">
-            {readTime} דקות קריאה
-          </span>
+          <span className="text-xs text-gray-500">{readTime} דקות קריאה</span>
         )}
       </div>
 
-      {/* Title */}
       <Link href={`/articles/${id}`}>
-        <h3 className="text-xl font-bold text-dark group-hover:text-primary transition-colors mb-3 line-clamp-2">
+        <h3 className="text-2xl font-semibold text-dark mb-4 transition-colors group-hover:text-primary">
           {title}
         </h3>
       </Link>
 
-      {/* Excerpt */}
-      <p className="text-gray-600 text-sm mb-4 line-clamp-3">
+      <p className="text-gray-600 leading-7 mb-6">
         {excerpt}
       </p>
 
-      {/* Footer */}
-      <div className="flex items-center justify-between pt-4 border-t border-gray-200">
-        <span className="text-xs text-gray-500">
-          {formatDate(date)}
-        </span>
-        <Link
-          href={`/articles/${id}`}
-          className="text-sm font-semibold text-primary hover:text-opacity-80 transition-colors"
-        >
+      <div className="flex items-center justify-between border-t border-[#E6D7C7] pt-4 text-sm text-gray-500">
+        <span>{formatDate(date)}</span>
+        <Link href={`/articles/${id}`} className="font-semibold text-secondary hover:text-dark">
           קרא עוד ←
         </Link>
       </div>
