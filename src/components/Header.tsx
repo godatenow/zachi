@@ -8,27 +8,29 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="bg-white shadow-sm">
-      <div className="container-main flex items-center justify-between py-4">
-        {/* Logo */}
-        <Link href="/" className="font-bold text-2xl text-primary hover:text-opacity-80">
-          צחי חן
-        </Link>
+    <header className="sticky top-0 z-50 bg-white/95 border-b border-[#E7D9C9] backdrop-blur-sm">
+      <div className="container-main flex items-center justify-between gap-4 py-4">
+        <div className="flex items-center gap-3">
+          <Link href="/" className="text-2xl font-semibold text-dark tracking-tight">
+            צחי חן
+          </Link>
+          <span className="hidden md:inline-block text-sm text-gray-600">
+            מאמן ויועץ למערכות יחסים | מחבר
+          </span>
+        </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-dark">
           {NAVIGATION_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="text-dark hover:text-primary font-medium transition-colors"
+              className="hover:text-primary transition-colors"
             >
               {link.label}
             </Link>
           ))}
         </nav>
 
-        {/* CTA Button */}
         <div className="hidden md:block">
           <a
             href={CONTACT_INFO.whatsapp}
@@ -40,9 +42,8 @@ export default function Header() {
           </a>
         </div>
 
-        {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex flex-col gap-2"
+          className="md:hidden flex flex-col gap-2 p-2"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
@@ -52,15 +53,14 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
       {isMenuOpen && (
-        <nav className="md:hidden border-t border-gray-200">
-          <div className="container-main py-4 flex flex-col gap-4">
+        <nav className="md:hidden border-t border-[#E7D9C9] bg-white">
+          <div className="container-main py-4 flex flex-col gap-4 text-dark">
             {NAVIGATION_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-dark hover:text-primary font-medium transition-colors"
+                className="block rounded-2xl px-4 py-3 hover:bg-cream transition-colors"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}

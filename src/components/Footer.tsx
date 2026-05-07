@@ -1,31 +1,26 @@
 import Link from 'next/link';
-import { SITE_CONFIG, CONTACT_INFO, NAVIGATION_LINKS, SOCIAL_LINKS } from '@/constants/config';
+import { SITE_CONFIG, CONTACT_INFO, NAVIGATION_LINKS } from '@/constants/config';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-dark text-white">
-      <div className="container-main py-12 sm:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
-          {/* Brand */}
+    <footer className="bg-dark text-cream">
+      <div className="container-main py-14 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-10">
           <div>
-            <h3 className="text-xl font-bold mb-4 text-accent">{SITE_CONFIG.name}</h3>
-            <p className="text-gray-300 text-sm leading-relaxed">
-              {SITE_CONFIG.description}
+            <h3 className="text-2xl font-semibold mb-4 text-secondary">{SITE_CONFIG.name}</h3>
+            <p className="text-sm leading-7 text-[#e8d7c7] max-w-md">
+              מאמן ויועץ למערכות יחסים שמאמין בבחירות בוגרות, בקשרים שיש להם יציבות ובעבודה שמבוססת על ניסיון אמיתי.
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="font-semibold mb-4 text-accent">קישורים מהירים</h4>
-            <ul className="space-y-2">
+            <h4 className="font-semibold mb-4 text-secondary">קישורים</h4>
+            <ul className="space-y-3 text-sm text-[#d9c8b8]">
               {NAVIGATION_LINKS.map((link) => (
                 <li key={link.href}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-accent transition-colors text-sm"
-                  >
+                  <Link href={link.href} className="hover:text-white transition-colors">
                     {link.label}
                   </Link>
                 </li>
@@ -33,69 +28,36 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact */}
           <div>
-            <h4 className="font-semibold mb-4 text-accent">יצירת קשר</h4>
-            <ul className="space-y-2 text-sm text-gray-300">
+            <h4 className="font-semibold mb-4 text-secondary">יצירת קשר</h4>
+            <ul className="space-y-3 text-sm text-[#d9c8b8]">
               <li>
-                <a
-                  href={`tel:${CONTACT_INFO.phone}`}
-                  className="hover:text-accent transition-colors"
-                >
+                <a href={`tel:${CONTACT_INFO.phone}`} className="hover:text-white transition-colors">
                   {CONTACT_INFO.phone}
                 </a>
               </li>
               <li>
-                <a
-                  href={`mailto:${CONTACT_INFO.email}`}
-                  className="hover:text-accent transition-colors"
-                >
+                <a href={`mailto:${CONTACT_INFO.email}`} className="hover:text-white transition-colors">
                   {CONTACT_INFO.email}
                 </a>
               </li>
               <li>
-                <a
-                  href={CONTACT_INFO.whatsapp}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-accent transition-colors"
-                >
+                <a href={CONTACT_INFO.whatsapp} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
                   WhatsApp
                 </a>
               </li>
             </ul>
           </div>
-
-          {/* Social Media */}
-          <div>
-            <h4 className="font-semibold mb-4 text-accent">עקבו אחרינו</h4>
-            <div className="flex gap-4">
-              {Object.entries(SOCIAL_LINKS).map(([platform, url]) => (
-                <a
-                  key={platform}
-                  href={url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="text-gray-300 hover:text-accent transition-colors capitalize text-sm"
-                >
-                  {platform}
-                </a>
-              ))}
-            </div>
-          </div>
         </div>
 
-        {/* Divider */}
-        <div className="border-t border-gray-700 pt-8">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-gray-400">
-            <p>
-              © {currentYear} {SITE_CONFIG.name}. כל הזכויות שמורות.
-            </p>
-            <div className="flex gap-6">
-              <Link href="#" className="hover:text-accent transition-colors">
+        <div className="border-t border-[#5B4A40] pt-8">
+          <div className="flex flex-col md:flex-row justify-between gap-4 text-sm text-[#b7a68c]">
+            <p>© {currentYear} {SITE_CONFIG.name}. כל הזכויות שמורות.</p>
+            <div className="flex flex-wrap gap-6">
+              <Link href="#" className="hover:text-white transition-colors">
                 תנאי שימוש
               </Link>
-              <Link href="#" className="hover:text-accent transition-colors">
+              <Link href="#" className="hover:text-white transition-colors">
                 מדיניות פרטיות
               </Link>
             </div>
