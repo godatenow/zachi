@@ -8,23 +8,23 @@ export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 bg-white/95 border-b border-[#E7D9C9] backdrop-blur-sm">
-      <div className="container-main flex items-center justify-between gap-4 py-4">
-        <div className="flex items-center gap-3">
-          <Link href="/" className="text-2xl font-semibold text-dark tracking-tight">
+    <header className="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-[#e8d5b7]/40 shadow-[0_2px_16px_-8px_rgba(44,36,24,0.08)]">
+      <div className="container-main flex items-center justify-between gap-6 py-6">
+        <div className="flex items-center gap-4">
+          <Link href="/" className="text-2xl font-semibold text-[#2c2418] tracking-tight hover:text-[#8b6e53] transition-colors">
             צחי חן
           </Link>
-          <span className="hidden md:inline-block text-sm text-gray-600">
+          <span className="hidden lg:inline-block text-sm text-[#5c4b42] font-medium">
             מאמן ויועץ למערכות יחסים | מחבר
           </span>
         </div>
 
-        <nav className="hidden lg:flex items-center gap-10 text-base font-medium text-dark">
+        <nav className="hidden lg:flex items-center gap-8 text-base font-medium text-[#2c2418]">
           {NAVIGATION_LINKS.map((link) => (
             <Link
               key={link.href}
               href={link.href}
-              className="hover:text-primary transition-colors"
+              className="relative hover:text-[#8b6e53] transition-all duration-300 before:absolute before:bottom-0 before:left-0 before:w-0 before:h-0.5 before:bg-[#8b6e53] before:transition-all before:duration-300 hover:before:w-full"
             >
               {link.label}
             </Link>
@@ -43,24 +43,24 @@ export default function Header() {
         </div>
 
         <button
-          className="md:hidden flex flex-col gap-2 p-2"
+          className="lg:hidden flex flex-col gap-1.5 p-3 rounded-lg hover:bg-[#f8f0e4] transition-colors"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
           aria-label="Toggle menu"
         >
-          <span className="w-6 h-0.5 bg-dark block"></span>
-          <span className="w-6 h-0.5 bg-dark block"></span>
-          <span className="w-6 h-0.5 bg-dark block"></span>
+          <span className="w-6 h-0.5 bg-[#2c2418] block transition-all duration-300" style={{ transform: isMenuOpen ? 'rotate(45deg) translate(6px, 6px)' : 'none' }}></span>
+          <span className="w-6 h-0.5 bg-[#2c2418] block transition-all duration-300" style={{ opacity: isMenuOpen ? 0 : 1 }}></span>
+          <span className="w-6 h-0.5 bg-[#2c2418] block transition-all duration-300" style={{ transform: isMenuOpen ? 'rotate(-45deg) translate(6px, -6px)' : 'none' }}></span>
         </button>
       </div>
 
       {isMenuOpen && (
-        <nav className="md:hidden border-t border-[#E7D9C9] bg-white">
-          <div className="container-main py-4 flex flex-col gap-4 text-dark">
+        <nav className="lg:hidden border-t border-[#e8d5b7]/40 bg-white/98 backdrop-blur-sm shadow-lg">
+          <div className="container-main py-6 flex flex-col gap-4 text-[#2c2418]">
             {NAVIGATION_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="block rounded-2xl px-4 py-3 hover:bg-cream transition-colors"
+                className="block rounded-lg px-4 py-3 hover:bg-[#f8f0e4] transition-all duration-300 hover:translate-x-2"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {link.label}
@@ -70,7 +70,7 @@ export default function Header() {
               href={CONTACT_INFO.whatsapp}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary w-full text-center mt-2"
+              className="btn-primary w-full text-center mt-4"
             >
               {CTA_LABELS.scheduleCall}
             </a>

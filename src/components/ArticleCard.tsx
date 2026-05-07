@@ -19,32 +19,36 @@ export default function ArticleCard({
   readTime,
 }: ArticleCardProps) {
   return (
-    <article className="group rounded-[2rem] border border-[#E4D4C4] bg-white p-6 shadow-soft transition-all duration-300 hover:-translate-y-1 hover:border-secondary">
-      <div className="flex flex-col gap-3 mb-4">
+    <article className="article-card group">
+      <div className="flex flex-col gap-4 mb-6">
         {category && (
-          <span className="inline-flex rounded-full bg-[#F5E5D6] px-3 py-1 text-xs font-semibold text-[#8B5A3C]">
+          <span className="badge w-fit">
             {category}
           </span>
         )}
         {readTime && (
-          <span className="text-xs text-gray-500">{readTime} דקות קריאה</span>
+          <span className="text-sm text-[#8a7a6c] font-medium">{readTime} דקות קריאה</span>
         )}
       </div>
 
       <Link href={`/articles/${id}`}>
-        <h3 className="text-2xl font-semibold text-dark mb-4 transition-colors group-hover:text-primary">
+        <h3 className="text-2xl font-semibold text-[#2c2418] mb-4 transition-all duration-300 group-hover:text-[#8b6e53] leading-[1.3]">
           {title}
         </h3>
       </Link>
 
-      <p className="text-gray-600 leading-7 mb-6">
+      <p className="text-[#5c4b42] leading-[1.6] mb-6 line-clamp-3">
         {excerpt}
       </p>
 
-      <div className="flex items-center justify-between border-t border-[#E6D7C7] pt-4 text-sm text-gray-500">
-        <span>{formatDate(date)}</span>
-        <Link href={`/articles/${id}`} className="font-semibold text-secondary hover:text-dark">
-          קרא עוד ←
+      <div className="flex items-center justify-between border-t border-[#e8d5b7]/50 pt-4">
+        <span className="text-sm text-[#8a7a6c] font-medium">{formatDate(date)}</span>
+        <Link
+          href={`/articles/${id}`}
+          className="text-sm font-semibold text-[#8b6e53] hover:text-[#6b4a34] transition-colors flex items-center gap-2"
+        >
+          לקריאה
+          <span className="text-lg transition-transform duration-300 group-hover:translate-x-1">←</span>
         </Link>
       </div>
     </article>
