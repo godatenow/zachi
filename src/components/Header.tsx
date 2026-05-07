@@ -19,7 +19,7 @@ export default function Header() {
           </span>
         </div>
 
-        <nav className="hidden lg:flex items-center gap-8 text-sm font-medium text-dark">
+        <nav className="hidden lg:flex items-center gap-10 text-base font-medium text-dark">
           {NAVIGATION_LINKS.map((link) => (
             <Link
               key={link.href}

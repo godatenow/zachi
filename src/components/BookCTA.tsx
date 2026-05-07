@@ -3,71 +3,65 @@ import CTAButton from './CTAButton';
 
 interface BookCTAProps {
   showImage?: boolean;
-  fullWidth?: boolean;
 }
 
-export default function BookCTA({ showImage = true, fullWidth = false }: BookCTAProps) {
+export default function BookCTA({ showImage = true }: BookCTAProps) {
   return (
-    <section className={`section-padding bg-gradient-to-l from-light to-white ${fullWidth ? '' : 'container-main'}`}>
-      <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12">
-        {/* Book Image */}
-        {showImage && (
-          <div className="w-full md:w-1/3 flex-shrink-0">
-            {/* TODO: Replace with actual book cover image - placeholder for now */}
-            <div className="aspect-[3/4] bg-gradient-to-br from-primary to-secondary rounded-lg shadow-lg flex items-center justify-center">
-              <div className="text-center text-white p-6">
-                <p className="text-2xl font-bold mb-4">📖</p>
-                <p className="font-semibold">{BOOK_INFO.title}</p>
-              </div>
-            </div>
-          </div>
-        )}
-
-        {/* Content */}
-        <div className="w-full md:w-2/3">
-          <h2 className="text-3xl md:text-4xl font-bold text-dark mb-4">
-            הספר שלי: {BOOK_INFO.title}
+    <section className="section-padding bg-[#fff5eb]">
+      <div className="container-main grid gap-10 lg:grid-cols-[1.2fr_0.8fr] items-center">
+        <div className="space-y-6">
+          <span className="inline-flex rounded-full bg-[#E7D0B8] px-4 py-2 text-sm font-semibold text-[#6F4632]">
+            הספר: מדייטים לאהבה
+          </span>
+          <h2 className="text-4xl lg:text-5xl font-semibold text-dark max-w-3xl leading-tight">
+            איך לבחור נכון בדייטים, בלי לחכות לניצוץ או להסתמך על מזל.
           </h2>
-          <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-            {BOOK_INFO.description}
+          <p className="text-lg text-[#4f3d34] max-w-2xl leading-9">
+            ספר שמביא את ההבנה והכלים מהשטח — בלי מילים מיותרות, בלי סוגיות רגשיות מפוזרות. מענה לאנשים שמחפשים לבנות קשר בריא מתוך חשיבה בוגרת.
           </p>
 
-          <div className="space-y-4 mb-8">
-            <div className="flex items-start gap-3">
-              <span className="text-primary font-bold text-2xl">✓</span>
-              <div>
-                <p className="font-semibold text-dark">מעשי היישום</p>
-                <p className="text-gray-600 text-sm">טיפים וכלים שניתן ליישם מיד בחיים האמיתיים</p>
-              </div>
+          <div className="grid gap-4 sm:grid-cols-2">
+            <div className="story-card">
+              <h3 className="text-lg font-semibold text-dark mb-2">בהירות על הבחירה</h3>
+              <p className="text-sm text-gray-600 leading-7">
+                תרגילים שמציגים במהירות את הנטיות שלכם בבחירות רומנטיות.
+              </p>
             </div>
-            <div className="flex items-start gap-3">
-              <span className="text-primary font-bold text-2xl">✓</span>
-              <div>
-                <p className="font-semibold text-dark">בנוי על ניסיון</p>
-                <p className="text-gray-600 text-sm">חוכמה מעשור של עבודה עם קשרים וקשיים</p>
-              </div>
-            </div>
-            <div className="flex items-start gap-3">
-              <span className="text-primary font-bold text-2xl">✓</span>
-              <div>
-                <p className="font-semibold text-dark">לקוראים חכמים</p>
-                <p className="text-gray-600 text-sm">בלא קליות, בלא שטויות, בלא דברים מובנים</p>
-              </div>
+            <div className="story-card">
+              <h3 className="text-lg font-semibold text-dark mb-2">יישום מיידי</h3>
+              <p className="text-sm text-gray-600 leading-7">
+                כלים שניתן ליישם כבר בדייט הבא או בשיחה הקרובה.
+              </p>
             </div>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-4 items-start sm:items-center">
+          <div className="flex flex-col sm:flex-row items-start gap-4">
             <CTAButton
               href={CONTACT_INFO.bookPurchaseLink}
               label={`${CTA_LABELS.buyBook} - ${BOOK_INFO.price}`}
               variant="primary"
               external
             />
-            <p className="text-sm text-gray-600">
-              📚 זמין בכל חנויות הספרים הגדולות בישראל
-            </p>
+            <CTAButton
+              href="/contact"
+              label={CTA_LABELS.scheduleCall}
+              variant="outline"
+            />
           </div>
         </div>
+
+        {showImage && (
+          <div className="hero-card">
+            <div className="rounded-[2rem] border border-[#e7d2bc] bg-[#fbf1e8] p-8 shadow-[0_24px_60px_-30px_rgba(112,76,48,0.22)]">
+              <div className="aspect-[3/4] rounded-[1.75rem] bg-[#d4ac7d] flex items-center justify-center text-6xl text-white">
+                📘
+              </div>
+              <div className="mt-6 text-sm text-[#6f5b4f]">
+                עטיפה זמנית - החלף בתמונה רשמית של הספר כאשר תהיה זמינה.
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     </section>
   );

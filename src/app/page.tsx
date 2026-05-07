@@ -9,58 +9,143 @@ export default function Home() {
 
   return (
     <div>
-      <section className="section-padding bg-[radial-gradient(circle_at_top_left,_rgba(184,141,104,0.16),_transparent_35%),linear-gradient(180deg,_#fbf6ef_0%,_#f2e9dd_100%)]">
-        <div className="container-main grid gap-12 lg:grid-cols-[1.25fr_0.9fr] items-center">
-          <div className="max-w-3xl">
-            <span className="hero-label">
-              ליווי אישי לקשרים בוגרים ויציבים
-            </span>
-            <h1 className="text-4xl sm:text-5xl lg:text-[4.5rem] font-semibold text-dark leading-tight tracking-tight mb-6 max-w-3xl">
-              להפסיק לרדוף אחרי אהבה — ולהתחיל לבחור נכון
-            </h1>
-            <p className="section-subtitle mb-10">
-              עם ניסיון של שנים בעבודה אישית וקריאה של דפוסים, אני מלווה אנשים שנמאס להם לחזור על אותן בחירות רגשיות ומחפשים דרך ברורה יותר ליציבות.
-            </p>
+      <section className="section-padding overflow-hidden bg-[radial-gradient(circle_at_top_left,_rgba(184,141,104,0.18),_transparent_30%),linear-gradient(180deg,_#fbf6ef_0%,_#f8e8da_100%)]">
+        <div className="container-main relative">
+          <div className="pointer-events-none absolute right-0 top-10 hidden h-80 w-80 rounded-full bg-[#d7b48a]/20 blur-3xl lg:block" />
+          <div className="pointer-events-none absolute left-0 bottom-0 hidden h-72 w-72 rounded-full bg-[#cfa16f]/20 blur-3xl lg:block" />
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4">
-              <CTAButton
-                href={CONTACT_INFO.whatsapp}
-                label={CTA_LABELS.scheduleCall}
-                variant="primary"
-                external
-              />
-              <CTAButton
-                href={CONTACT_INFO.bookPurchaseLink}
-                label={CTA_LABELS.buyBook}
-                variant="secondary"
-                external
-              />
-              <CTAButton
-                href="/articles"
-                label={CTA_LABELS.readArticles}
-                variant="outline"
-              />
+          <div className="grid gap-12 lg:grid-cols-[1.25fr_0.95fr] items-center">
+            <div className="max-w-3xl">
+              <span className="hero-label">
+                בחירות רגשיות בוגרות
+              </span>
+              <h1 className="text-4xl sm:text-5xl lg:text-[4.8rem] leading-[1.03] font-semibold text-dark tracking-tight mb-6 max-w-3xl">
+                להפסיק לרדוף אחרי אהבה —
+                <br />
+                ולהתחיל לבחור נכון
+              </h1>
+              <p className="section-subtitle mb-12 text-[#4f3d34]">
+                אני צחי חן. אני מלווה אנשים שמעוניינים ביחסים שמרגישים חזקים גם אחרי הלהט הראשוני — עם בהירות, החלטות ברורות ועבודה שמכבדת את הנשמה.
+              </p>
+
+              <div className="flex flex-col gap-4 sm:flex-row sm:flex-wrap">
+                <CTAButton
+                  href={CONTACT_INFO.whatsapp}
+                  label={CTA_LABELS.scheduleCall}
+                  variant="primary"
+                  external
+                />
+                <CTAButton
+                  href={CONTACT_INFO.bookPurchaseLink}
+                  label={CTA_LABELS.buyBook}
+                  variant="secondary"
+                  external
+                />
+                <CTAButton
+                  href="/articles"
+                  label={CTA_LABELS.readArticles}
+                  variant="outline"
+                />
+              </div>
+            </div>
+
+            <div className="hero-panel">
+              <div className="hero-card">
+                <div className="grid gap-8">
+                  <div className="rounded-[2rem] bg-[#f6e6d6] p-6">
+                    <div className="mb-5 flex items-center gap-4">
+                      <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#cfa16f] text-4xl text-white">
+                        👤
+                      </div>
+                      <div>
+                        <p className="text-sm uppercase tracking-[0.18em] text-[#7a5a3f]">
+                          צחי חן
+                        </p>
+                        <p className="text-lg font-semibold text-dark">
+                          מאמן ויועץ למערכות יחסים
+                        </p>
+                      </div>
+                    </div>
+                    <p className="text-sm leading-7 text-[#52433f]">
+                      מחבר {`"מדייטים לאהבה"`} שמלווה אנשים ברגעים שהבחירה שלהם קובעת אכן את מה שיקרה בהמשך.
+                    </p>
+                  </div>
+
+                  <div className="rounded-[2rem] bg-white p-6 shadow-[0_20px_40px_-20px_rgba(112,76,48,0.18)] border border-[#ecd9c4]">
+                    <p className="text-xs uppercase tracking-[0.2em] text-[#8f6c4e] mb-3">
+                      מה אפשר לקבל
+                    </p>
+                    <ul className="space-y-4 text-sm leading-7 text-[#5c4b42]">
+                      <li>בהירות רגשית על הדפוסים שמובילים לבחירות חוזרות.</li>
+                      <li>כלים מעשיים לשיחה ובדייטים הבאים.</li>
+                      <li>דרך ברורה לבחון אם הקשר יכול להחזיק לאורך זמן.</li>
+                    </ul>
+                  </div>
+
+                  <div className="rounded-[2rem] bg-[#fbf1e8] p-6 border border-[#e8d3b8]">
+                    <p className="text-sm font-semibold text-dark mb-3">Placeholder לתמונה</p>
+                    <div className="aspect-[4/5] rounded-[1.75rem] bg-[#d5b48b] flex items-center justify-center text-5xl text-white">
+                      👤
+                    </div>
+                    <p className="mt-4 text-xs text-[#6f5b4f] leading-6">
+                      תמונת מחבר זמנית. החלף בהמשך בתמונה מקצועית של צחי חן.
+                    </p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          <div className="rounded-[2.5rem] border border-[#D6B48F] bg-[#fff7ed] p-10 shadow-soft">
-            <div className="rounded-[2rem] bg-white border border-[#E5D0B8] p-8 shadow-sm">
-              <div className="mb-8 mx-auto flex h-24 w-24 items-center justify-center rounded-full border border-[#D4B18D] bg-[#F5E1C8] text-5xl">
-                👤
+      <section className="section-padding bg-[#fff5eb]">
+        <div className="container-main">
+          <div className="grid gap-12 lg:grid-cols-[0.9fr_0.95fr] items-center">
+            <div className="max-w-2xl">
+              <p className="text-sm uppercase tracking-[0.22em] text-[#8b6e53] mb-4">
+                אודות צחי
+              </p>
+              <h2 className="section-title text-left">
+                ניסיון שנבנה על קשרים אמיתיים, לא על תיאוריות יפות
+              </h2>
+              <p className="text-lg text-[#4f3d34] leading-9 mb-8">
+                אחרי עשור בעבודה אישית וזוגית, אני יודע להבדיל בין ריגוש לרצון אמיתי. אני עובד עם אנשים שמחפשים לא רק אהבה, אלא גם יציבות, הבנה ודרך שמרגישה נכונה בכל יום.
+              </p>
+              <div className="grid gap-4 sm:grid-cols-2">
+                <div className="story-card">
+                  <h3 className="text-lg font-semibold text-dark mb-3">דפוסים במקום סתירות</h3>
+                  <p className="text-sm text-gray-600 leading-7">
+                    לא לוקחים את הקשר כעניין של מזל, אלא כקצה של דפוסים שמובילים אותנו בחזרה לאותם טעויות.
+                  </p>
+                </div>
+                <div className="story-card">
+                  <h3 className="text-lg font-semibold text-dark mb-3">כלים שמרגישים אישיים</h3>
+                  <p className="text-sm text-gray-600 leading-7">
+                    לא טיפים גנריים, אלא שאלות ומשימות שמותאמות למה שקורה לכם בחיים הרומנטיים היום.
+                  </p>
+                </div>
               </div>
-              <p className="text-xl font-semibold text-dark mb-2">
-                צחי חן
-              </p>
-              <p className="text-sm text-gray-600 leading-7 mb-5">
-                מאמן ויועץ למערכות יחסים | מחבר הספר {`"מדייטים לאהבה"`}
-              </p>
-              <div className="space-y-4 text-sm text-gray-700 leading-7">
-                <p>
-                  עוזר לרווקים, גרושים וזוגות לייצר בחירות חדשות שנשארות גם כשהרגשות מתמתנים.
-                </p>
-                <p>
-                  לא רק להסביר מה לא עובד, אלא למצוא יחד דרך לשנות את האופן שבו אתם בוחרים אדם ובן זוג.
-                </p>
+            </div>
+
+            <div className="hero-card">
+              <div className="rounded-[2rem] border border-[#e7d2bc] bg-[#fff8ee] p-8 shadow-[0_20px_60px_-30px_rgba(112,76,48,0.2)]">
+                <div className="text-sm uppercase tracking-[0.22em] text-[#8b6e53] mb-4">
+                  למי זה מתאים
+                </div>
+                <div className="space-y-4">
+                  <div className="rounded-[1.75rem] bg-white p-6 border border-[#e9d7c3]">
+                    <h3 className="font-semibold text-dark mb-2">רצינות במקום ריגוש</h3>
+                    <p className="text-sm text-gray-600 leading-7">
+                      לאנשים שמחפשים לבחור מתוך שיקול דעת ולא מתוך תחושת קיץ רגעית.
+                    </p>
+                  </div>
+                  <div className="rounded-[1.75rem] bg-white p-6 border border-[#e9d7c3]">
+                    <h3 className="font-semibold text-dark mb-2">בחירה שחוזרת</h3>
+                    <p className="text-sm text-gray-600 leading-7">
+                      מי שרוצה לדעת איך לא לחזור על אותם סרטים עם אנשים לא מתאימים.
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -69,106 +154,59 @@ export default function Home() {
 
       <section className="section-padding">
         <div className="container-main">
-          <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] items-start">
-            <div>
-              <h2 className="section-title text-left">מי עומד מאחורי זה</h2>
-              <p className="text-lg text-gray-700 leading-8 max-w-3xl mb-8">
-                שמי צחי חן, ואני עוזר לאנשים למצוא יציבות בקשרים מבלי לוותר על עצמם. לא מדובר ברעיונות או בהבטחות — מדובר בעבודה על הבחירות שלכם, פעם אחר פעם.
-              </p>
-              <div className="grid gap-4 sm:grid-cols-2">
-                <div className="rounded-[2rem] border border-[#E4D4C4] bg-white p-7 shadow-soft">
-                  <h3 className="font-semibold text-dark mb-3">מבט על דפוסים</h3>
-                  <p className="text-sm text-gray-600 leading-7">
-                    לזהות את הדפוסים שמובילים לדייטים לא מתאימים ולזוגיות שמרגישה לא כנה.
-                  </p>
-                </div>
-                <div className="rounded-[2rem] border border-[#E4D4C4] bg-white p-7 shadow-soft">
-                  <h3 className="font-semibold text-dark mb-3">כלים להתמודדות</h3>
-                  <p className="text-sm text-gray-600 leading-7">
-                    כלים פשוטים וברורים שניתן להשתמש בהם בשיחה, בדייט או ברגעים של החלטה.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="rounded-[2.5rem] border border-[#D6B48F] bg-[#F9F2E8] p-10 shadow-soft">
-              <h3 className="text-xl font-semibold text-dark mb-5">איך זה נראה בעבודה</h3>
-              <ul className="space-y-5 text-gray-700">
-                <li className="rounded-[1.75rem] bg-white p-6 border border-[#E5D0B8] shadow-sm">
-                  <strong className="block mb-2">שיחה ראשונית ממוקדת</strong>
-                  לגלות מה חוזר על עצמו בבחירות שלכם, ואיפה טמונה ההזדמנות לשינוי.
-                </li>
-                <li className="rounded-[1.75rem] bg-white p-6 border border-[#E5D0B8] shadow-sm">
-                  <strong className="block mb-2">בהירות על הקריטריונים</strong>
-                  להבחין בין רגשות עוצמתיים לבין קווים אדומים שיכולים לבנות קשר יציב.
-                </li>
-                <li className="rounded-[1.75rem] bg-white p-6 border border-[#E5D0B8] shadow-sm">
-                  <strong className="block mb-2">כתיבה של דרך חדשה</strong>
-                  לבנות בחירות שמרגישות אותנטיות, אבל גם ממשיות לאורך זמן.
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-cream">
-        <div className="container-main">
           <div className="max-w-4xl mx-auto text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.22em] text-[#8b6e53] mb-4">למידע מקצועי</p>
             <h2 className="section-title">למי האתר מתאים</h2>
-            <p className="text-base text-gray-700 leading-8">
-              לאלה שמרגישים שהם צריכים דרך ברורה יותר בבחירות רגשיות, ורוצים עזרה שמבוססת על ניסיון ולא על סיסמאות.
+            <p className="text-base text-[#4f3d34] leading-8 max-w-2xl mx-auto">
+              מי שמוכן לקחת אחריות על הבחירות שלו, ומבין שההחלטות הרגשיות החשובות ביותר הן אלה שמתנהלות גם אחרי הצעדים הראשונים.
             </p>
           </div>
 
           <div className="grid gap-6 md:grid-cols-3">
-            <div className="rounded-[2rem] border border-[#E4D4C4] bg-white p-8 shadow-soft">
+            <div className="story-card">
               <h3 className="text-xl font-semibold text-dark mb-3">רווקים ורווקות</h3>
               <p className="text-gray-700 leading-7">
-                מי שמחפש להפסיק להתאים את עצמו לדייטים ולהתחיל לבחור בביטחון את מי שליבו רוצה באמת.
-              </p>
+                מי שחושב שהסיפור שלו יכול להרגיש אחרת, ושמוכן לשנות את הקריטריונים שלו לדייטים.</p>
             </div>
-            <div className="rounded-[2rem] border border-[#E4D4C4] bg-white p-8 shadow-soft">
+            <div className="story-card">
               <h3 className="text-xl font-semibold text-dark mb-3">גרושים וגרושות</h3>
               <p className="text-gray-700 leading-7">
-                מי שרוצה לבנות קשר חדש על בסיס של חופש ורצון אמיתי, בלי לחזור אוטומטית על מה שכשל בעבר.
-              </p>
+                מי שמבין שהקשר הבא יכול להיבנות על מסגרת אחרת, ובהירות רגשית בריאה יותר.</p>
             </div>
-            <div className="rounded-[2rem] border border-[#E4D4C4] bg-white p-8 shadow-soft">
+            <div className="story-card">
               <h3 className="text-xl font-semibold text-dark mb-3">אנשים בתוך קשר</h3>
               <p className="text-gray-700 leading-7">
-                מי שמחפש לקשר שלו עומק ושקט, לא רק ריגוש זמני או הבטחות מרוממות.
-              </p>
+                מי שרוצה לעבוד על הקשר שלו אחרי הריגוש, ולהפוך אותו ליציב יותר גם בימים רגילים.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="section-padding">
+      <section className="section-padding bg-[#fff5eb]">
         <div className="container-main">
           <div className="max-w-4xl mx-auto text-center mb-12">
+            <p className="text-sm uppercase tracking-[0.22em] text-[#8b6e53] mb-4">מה תפגשו כאן</p>
             <h2 className="section-title">מה תקבלו כאן</h2>
-            <p className="text-base text-gray-700 leading-8 max-w-2xl mx-auto">
-              לא עוד טיפים כלליים. פה תקבלו דרך עבודה שמכוונת לעמוד של הבחירה, לא רק של הרגש הרגעי.
-            </p>
+            <p className="text-base text-[#4f3d34] leading-8 max-w-2xl mx-auto">
+              אני מציע לא רק תיאוריות. האתר הזה מוביל אתכם לכלים מעשיים, לדיוק ברגשות ולבחירות שמרגישות נכונות גם אחרי כמה חודשים.</p>
           </div>
 
           <div className="grid gap-6 lg:grid-cols-4">
-            <div className="rounded-[2rem] bg-white p-8 text-gray-700 shadow-soft border border-[#E4D4C4]">
+            <div className="story-card">
               <h3 className="font-semibold text-dark mb-4">בהירות</h3>
-              <p className="text-sm leading-7">לזהות בבהירות מה משפיע על התשוקה שלכם ומה באמת יכול לשמור על קשר לאורך זמן.</p>
+              <p className="text-sm leading-7 text-gray-700">להבין מה מפעיל את המשיכה שלכם, ומה משמר את הקשר.</p>
             </div>
-            <div className="rounded-[2rem] bg-white p-8 text-gray-700 shadow-soft border border-[#E4D4C4]">
+            <div className="story-card">
               <h3 className="font-semibold text-dark mb-4">כלים מעשיים</h3>
-              <p className="text-sm leading-7">צעדים מוגדרים לשיחה ברורה, מבט על דייטים והחלטות שלא נשענות על חרדה.</p>
+              <p className="text-sm leading-7 text-gray-700">התערבויות ברורות לשיחה, לדייטים ואף להחלטות חזרה אחריות.</p>
             </div>
-            <div className="rounded-[2rem] bg-white p-8 text-gray-700 shadow-soft border border-[#E4D4C4]">
+            <div className="story-card">
               <h3 className="font-semibold text-dark mb-4">הבנה של דפוסים</h3>
-              <p className="text-sm leading-7">לזהות דפוסים מוכרים ולשבור אותם לפני שהם מכתיבים את הבחירה הבאה.</p>
+              <p className="text-sm leading-7 text-gray-700">לזהות דפוסים שממשיכים להרוס בחירות ולהוציא אתכם מהמסלול.</p>
             </div>
-            <div className="rounded-[2rem] bg-white p-8 text-gray-700 shadow-soft border border-[#E4D4C4]">
-              <h3 className="font-semibold text-dark mb-4">דרך לבחירה בוגרת יותר</h3>
-              <p className="text-sm leading-7">בחירה מתוך עוצמה ולא מתוך תחושת חוסר — כך שתוכל להרגיש בטוח גם אחרי ההתחלה.</p>
+            <div className="story-card">
+              <h3 className="font-semibold text-dark mb-4">דרך לבחירה בוגרת</h3>
+              <p className="text-sm leading-7 text-gray-700">כדי לבחור מתוך עוצמה פנימית ולא מתוך פחד או שכנוע.</p>
             </div>
           </div>
         </div>
@@ -205,7 +243,7 @@ export default function Home() {
             החלטה שמתחילה ברגע הזה
           </span>
           <h2 className="section-title">לשיחה שמכוונת את הבחירה שלך</h2>
-          <p className="text-base text-gray-600 max-w-2xl mx-auto leading-7 mb-8">
+          <p className="text-base text-gray-600 max-w-2xl mx-auto leading-8 mb-8">
             תיאום שיחה מאפשר להבין איפה עומדים, מה שומר עליכם מאחור ואיך לצאת לדרך אחרת עם בטחון.
           </p>
           <CTAButton href={CONTACT_INFO.whatsapp} label={CTA_LABELS.scheduleCall} variant="primary" external />
