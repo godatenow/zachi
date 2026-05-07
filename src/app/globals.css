@@ -14,51 +14,74 @@ html {
 }
 
 body {
-  background-color: #f5f3f0;
-  color: #2c2c2c;
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.6;
+  background-color: #fbf6ef;
+  color: #383232;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  line-height: 1.65;
 }
 
-a {
-  transition: all 0.3s ease;
+::selection {
+  background: rgba(139, 90, 60, 0.2);
 }
 
+a,
 button {
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
+}
+
+img {
+  display: block;
+  max-width: 100%;
 }
 
 @layer components {
   .container-main {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply mx-auto px-4 sm:px-6 lg:px-12;
+    max-width: 90rem;
+  }
+
+  .surface-card {
+    @apply bg-white/95 border border-[rgba(112,76,48,0.12)] shadow-[0_24px_60px_-40px_rgba(0,0,0,0.18)] rounded-[2rem];
   }
 
   .btn-primary {
-    @apply px-6 py-3 bg-primary text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 active:scale-95;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 bg-primary text-white text-base font-semibold shadow-[0_18px_45px_-25px_rgba(124,77,47,0.55)] hover:shadow-[0_20px_50px_-28px_rgba(124,77,47,0.6)] active:scale-[0.98];
   }
 
   .btn-secondary {
-    @apply px-6 py-3 bg-secondary text-white rounded-lg font-semibold hover:bg-opacity-90 transition-all duration-300 active:scale-95;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 bg-secondary text-white text-base font-semibold hover:bg-opacity-95 active:scale-[0.98];
   }
 
   .btn-outline {
-    @apply px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all duration-300;
-  }
-
-  .text-gradient {
-    @apply bg-gradient-to-l from-primary to-secondary bg-clip-text text-transparent;
+    @apply inline-flex items-center justify-center gap-2 rounded-full px-8 py-3.5 border-2 border-primary text-primary text-base font-semibold hover:bg-primary hover:text-white;
   }
 
   .section-padding {
-    @apply py-12 sm:py-16 lg:py-20;
+    @apply py-20 sm:py-24 lg:py-28;
   }
 
   .section-title {
-    @apply text-3xl sm:text-4xl font-bold text-dark text-center mb-8 sm:mb-12;
+    @apply text-3xl sm:text-4xl lg:text-5xl font-semibold text-dark text-center mb-8 sm:mb-10;
+  }
+
+  .section-subtitle {
+    @apply text-base sm:text-lg lg:text-xl text-gray-700 max-w-4xl mx-auto leading-8;
+  }
+
+  .hero-label {
+    @apply inline-flex rounded-full bg-[#E7D0B8] px-4 py-2 text-sm font-semibold text-[#6F4632] mb-6;
+  }
+
+  .text-soft {
+    @apply text-[#5f4a3b];
+  }
+
+  .bg-cream {
+    background-color: #fbf6ef;
   }
 }
