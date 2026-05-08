@@ -10,29 +10,21 @@ export const SITE_CONFIG = {
 };
 
 export const CONTACT_INFO = {
-  // TODO: Replace with actual phone number (Format: +972XXXXXXXXX)
-  phone: '+972-XX-XXX-XXXX',
-  
-  // TODO: Replace with actual WhatsApp link (Format: https://wa.me/972XXXXXXXXX)
-  whatsapp: 'https://wa.me/972XXXXXXXXX',
-  
-  // TODO: Replace with actual email
-  email: 'contact@zachi.co.il',
-  
-  // TODO: Replace with actual book purchase link (e.g., Amazon, local publisher)
-  bookPurchaseLink: 'https://book-store.com/zachi-hen-book',
-  
-  // TODO: Replace with actual author photo URL
+  phone: '0504018080',
+  phoneDisplay: '050-4018080',
+  whatsapp: 'https://wa.me/972504018080',
+  email: 'zachicoach@gmail.com',
+  bookPurchaseLink: 'https://wa.me/972504018080',
   authorPhotoUrl: '/images/zachi-hero.jpg',
 };
 
 export const BOOK_INFO = {
-  title: 'מדייטים לאהבה',
-  titleEn: 'From Dating to Love',
+  title: 'מדייטינג לאהבה',
+  subtitle: 'איך לבחור נכון, לא להתפשר, ולבנות אהבה שמחזיקה',
+  author: 'צחי חן',
   description: 'ספר מעשי ומעוצב לכל מי שרוצה להבין את דרכו לקשר בריא ואמיתי',
   price: '89 ₪',
-  // TODO: Add actual book cover image URL
-  coverImageUrl: '/images/book-cover.jpg',
+  coverImageUrl: '', // הוסף כריכת ספר אמיתית ב-/public/book-cover.png או /public/book-cover.jpg כאשר היא תהיה זמינה
 };
 
 export const SOCIAL_LINKS = {

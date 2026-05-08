@@ -14,8 +14,8 @@ html {
 }
 
 body {
-  background-color: #faf2e8;
-  color: #2c2418;
+  background-color: theme('colors.main-bg');
+  color: theme('colors.text-primary');
   font-family: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   line-height: 1.7;
   font-feature-settings: 'cv01' on, 'liga' off;
@@ -73,15 +73,15 @@ img {
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 bg-gradient-to-r from-[#8b6e53] to-[#6b4a34] text-white text-base font-semibold shadow-[0_8px_24px_-8px_rgba(139,110,83,0.4)] hover:shadow-[0_12px_32px_-12px_rgba(139,110,83,0.5)] hover:from-[#9a7a5f] hover:to-[#7a563e] active:scale-[0.98] transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 bg-burgundy text-white text-base font-semibold shadow-[0_8px_24px_-8px_rgba(107,16,38,0.4)] hover:shadow-[0_12px_32px_-12px_rgba(107,16,38,0.5)] hover:bg-burgundy-hover active:scale-[0.98] transition-all duration-300;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 bg-gradient-to-r from-[#cfa16f] to-[#b8855a] text-white text-base font-semibold shadow-[0_6px_20px_-6px_rgba(207,161,111,0.35)] hover:shadow-[0_8px_24px_-8px_rgba(207,161,111,0.45)] hover:from-[#d4ad7b] hover:to-[#c49166] active:scale-[0.98] transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 bg-gradient-to-r from-soft-gold to-brand-brown text-white text-base font-semibold shadow-[0_6px_20px_-6px_rgba(201,154,90,0.35)] hover:shadow-[0_8px_24px_-8px_rgba(201,154,90,0.45)] hover:from-brand-brown hover:to-burgundy active:scale-[0.98] transition-all duration-300;
   }
 
   .btn-outline {
-    @apply inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 border-2 border-[#8b6e53] text-[#8b6e53] text-base font-semibold hover:bg-[#8b6e53] hover:text-white hover:shadow-[0_8px_24px_-8px_rgba(139,110,83,0.3)] transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 border-2 border-burgundy text-burgundy text-base font-semibold hover:bg-burgundy hover:text-white hover:shadow-[0_8px_24px_-8px_rgba(107,16,38,0.3)] transition-all duration-300;
   }
 
   .btn-ghost {

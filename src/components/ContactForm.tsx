@@ -70,7 +70,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="max-w-2xl mx-auto space-y-6">
       {/* Name */}
       <div>
-        <label htmlFor="name" className="block text-sm font-semibold text-dark mb-2">
+        <label htmlFor="name" className="block text-sm font-semibold text-text-primary mb-2">
           שם מלא *
         </label>
         <input
@@ -80,14 +80,14 @@ export default function ContactForm() {
           value={formData.name}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors"
+          className="w-full px-4 py-3 border-2 border-soft-border rounded-lg focus:outline-none focus:border-burgundy focus:bg-card-bg transition-colors"
           placeholder="כתוב את שמך"
         />
       </div>
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-sm font-semibold text-dark mb-2">
+        <label htmlFor="email" className="block text-sm font-semibold text-text-primary mb-2">
           דואר אלקטרוני *
         </label>
         <input
@@ -97,14 +97,14 @@ export default function ContactForm() {
           value={formData.email}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors"
+          className="w-full px-4 py-3 border-2 border-soft-border rounded-lg focus:outline-none focus:border-burgundy focus:bg-card-bg transition-colors"
           placeholder="your@email.com"
         />
       </div>
 
       {/* Phone */}
       <div>
-        <label htmlFor="phone" className="block text-sm font-semibold text-dark mb-2">
+        <label htmlFor="phone" className="block text-sm font-semibold text-text-primary mb-2">
           טלפון *
         </label>
         <input
@@ -114,14 +114,14 @@ export default function ContactForm() {
           value={formData.phone}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors"
+          className="w-full px-4 py-3 border-2 border-soft-border rounded-lg focus:outline-none focus:border-burgundy focus:bg-card-bg transition-colors"
           placeholder="050-XXX-XXXX"
         />
       </div>
 
       {/* Subject */}
       <div>
-        <label htmlFor="subject" className="block text-sm font-semibold text-dark mb-2">
+        <label htmlFor="subject" className="block text-sm font-semibold text-text-primary mb-2">
           נושא *
         </label>
         <input
@@ -131,14 +131,14 @@ export default function ContactForm() {
           value={formData.subject}
           onChange={handleChange}
           required
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors"
+          className="w-full px-4 py-3 border-2 border-soft-border rounded-lg focus:outline-none focus:border-burgundy focus:bg-card-bg transition-colors"
           placeholder="מה הנושא שלך?"
         />
       </div>
 
       {/* Message */}
       <div>
-        <label htmlFor="message" className="block text-sm font-semibold text-dark mb-2">
+        <label htmlFor="message" className="block text-sm font-semibold text-text-primary mb-2">
           הודעה *
         </label>
         <textarea
@@ -148,20 +148,20 @@ export default function ContactForm() {
           onChange={handleChange}
           required
           rows={6}
-          className="w-full px-4 py-3 border-2 border-gray-300 rounded-lg focus:outline-none focus:border-primary transition-colors resize-none"
+          className="w-full px-4 py-3 border-2 border-soft-border rounded-lg focus:outline-none focus:border-burgundy focus:bg-card-bg transition-colors resize-none"
           placeholder="כתוב את הודעתך כאן..."
         />
       </div>
 
       {/* Status Messages */}
       {submitStatus === 'success' && (
-        <div className="p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg">
+        <div className="p-4 bg-soft-gold/20 border border-soft-gold text-brand-brown rounded-lg">
           ✓ הודעתך נשלחה בהצלחה! אחזור אליך בקרוב.
         </div>
       )}
 
       {submitStatus === 'error' && (
-        <div className="p-4 bg-red-100 border border-red-400 text-red-700 rounded-lg">
+        <div className="p-4 bg-burgundy/20 border border-burgundy text-burgundy rounded-lg">
           ✗ אירעה שגיאה בשליחת הודעתך. אנא נסה שוב.
         </div>
       )}

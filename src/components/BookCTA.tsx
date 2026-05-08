@@ -42,15 +42,16 @@ export default function BookCTA({ showImage = true }: BookCTAProps) {
 
             <div className="flex flex-col sm:flex-row items-start gap-4">
               <CTAButton
-                href={CONTACT_INFO.bookPurchaseLink}
-                label={`${CTA_LABELS.buyBook} - ${BOOK_INFO.price}`}
+                href={CONTACT_INFO.whatsapp}
+                label={CTA_LABELS.scheduleCall}
                 variant="primary"
                 external
               />
               <CTAButton
-                href="/contact"
-                label={CTA_LABELS.scheduleCall}
-                variant="outline"
+                href={CONTACT_INFO.bookPurchaseLink}
+                label={`${CTA_LABELS.buyBook} - ${BOOK_INFO.price}`}
+                variant="secondary"
+                external
               />
             </div>
           </div>
