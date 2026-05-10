@@ -69,7 +69,7 @@ img {
   }
 
   .insight-card {
-    @apply bg-white border border-[#f0e6d6] shadow-[0_8px_24px_-12px_rgba(44,36,24,0.08)] rounded-[1rem] p-8 transition-all duration-300 hover:shadow-[0_16px_48px_-20px_rgba(44,36,24,0.12)] hover:-translate-y-1;
+    @apply bg-white border border-[#f0e0d4]/40 shadow-[0_10px_30px_-18px_rgba(44,36,24,0.06)] rounded-[1rem] p-8 transition-all duration-300 hover:shadow-[0_12px_34px_-18px_rgba(44,36,24,0.08)] hover:-translate-y-0.5;
   }
 
   .btn-primary {
@@ -85,7 +85,7 @@ img {
   }
 
   .btn-ghost {
-    @apply inline-flex items-center justify-center gap-3 rounded-full px-6 py-3 text-[#6b4a34] text-sm font-medium hover:bg-[#f8f0e4] transition-all duration-300;
+    @apply inline-flex items-center justify-center gap-3 rounded-full px-8 py-4 text-[#6b4a34] text-base font-semibold hover:bg-[#f8f0e4] transition-all duration-300;
   }
 
   .section-padding {
@@ -121,11 +121,11 @@ img {
   }
 
   .hero-card {
-    @apply rounded-[1.5rem] bg-white/95 backdrop-blur-sm border border-[#e8d5b7] p-8 shadow-[0_16px_48px_-20px_rgba(44,36,24,0.12)];
+    @apply rounded-[1.5rem] bg-[#fbf6f0] p-8 shadow-[0_14px_40px_-20px_rgba(44,36,24,0.10)];
   }
 
   .story-card {
-    @apply rounded-[1.25rem] bg-white border border-[#e8d5b7]/60 p-8 shadow-[0_8px_24px_-12px_rgba(44,36,24,0.08)] transition-all duration-300 hover:shadow-[0_16px_48px_-20px_rgba(44,36,24,0.12)] hover:-translate-y-1 hover:border-[#d4b48b];
+    @apply rounded-[1.25rem] bg-white border border-[#f0e0d4]/40 p-8 shadow-[0_10px_28px_-18px_rgba(44,36,24,0.06)] transition-all duration-300 hover:shadow-[0_12px_32px_-18px_rgba(44,36,24,0.08)] hover:-translate-y-0.5;
   }
 
   .article-card {

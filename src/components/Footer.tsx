@@ -61,13 +61,9 @@ export default function Footer() {
         <div className="border-t border-soft-border/30 pt-8">
           <div className="flex flex-col gap-6 lg:flex-row lg:items-center lg:justify-between text-sm text-soft-gold/60">
             <p>© {currentYear} צחי חן. כל הזכויות שמורות.</p>
-            <div className="flex flex-wrap gap-8">
-              <Link href="#" className="hover:text-soft-gold transition-colors">
-                תנאי שימוש
-              </Link>
-              <Link href="#" className="hover:text-soft-gold transition-colors">
-                מדיניות פרטיות
-              </Link>
+            <div className="flex flex-wrap gap-8 text-soft-gold/60">
+              <span className="transition-colors">תנאי שימוש</span>
+              <span className="transition-colors">מדיניות פרטיות</span>
             </div>
           </div>
         </div>

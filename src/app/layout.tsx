@@ -15,20 +15,20 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL('https://zachi-hen.com'), // TODO: Replace with actual domain
+  metadataBase: new URL('https://zachi.co.il'),
   alternates: {
     canonical: '/',
   },
   openGraph: {
     title: 'צחי חן | מאמן יחסים ומחבר "מדייטים לאהבה"',
     description: 'כלים מעשיים ליחסים בריאים ובחירות רגשיות בוגרות.',
-    url: 'https://zachi-hen.com', // TODO: Replace with actual domain
+    url: 'https://zachi.co.il',
     siteName: 'צחי חן',
     locale: 'he_IL',
     type: 'website',
     images: [
       {
-        url: '/og-image.jpg', // TODO: Add Open Graph image
+        url: '/og-image.jpg',
         width: 1200,
         height: 630,
         alt: 'צחי חן - מאמן יחסים ומחבר',
@@ -39,8 +39,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'צחי חן | מאמן יחסים ומחבר "מדייטים לאהבה"',
     description: 'כלים מעשיים ליחסים בריאים ובחירות רגשיות בוגרות.',
-    images: ['/og-image.jpg'], // TODO: Add Twitter image
-    creator: '@zachi_hen', // TODO: Replace with actual Twitter handle
+    images: ['/og-image.jpg'],
   },
   robots: {
     index: true,
@@ -52,9 +51,6 @@ export const metadata: Metadata = {
       'max-image-preview': 'large',
       'max-snippet': -1,
     },
-  },
-  verification: {
-    google: 'TODO: Add Google verification code',
   },
 };
 

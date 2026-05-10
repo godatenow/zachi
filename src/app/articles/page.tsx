@@ -3,8 +3,22 @@ import ArticleCard from '@/components/ArticleCard';
 import { getAllArticles } from '@/data/articles';
 
 export const metadata: Metadata = {
-  title: 'מאמרים ומשאבים - צחי חן',
+  title: 'מאמרים על דייטינג וזוגיות',
   description: 'תכנים חדות על דייטים, דפוסי בחירה ויחסים שמרגישים בריאים גם אחרי הריגוש הראשוני.',
+  alternates: {
+    canonical: '/articles',
+  },
+  openGraph: {
+    title: 'מאמרים על דייטינג וזוגיות - צחי חן',
+    description: 'תכנים חדות על דייטים, דפוסי בחירה ויחסים שמרגישים בריאים גם אחרי הריגוש הראשוני.',
+    url: 'https://zachi.co.il/articles',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'מאמרים על דייטינג וזוגיות - צחי חן',
+    description: 'תכנים חדות על דייטים, דפוסי בחירה ויחסים שמרגישים בריאים גם אחרי הריגוש הראשוני.',
+  },
 };
 
 export default function Articles() {

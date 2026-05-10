@@ -22,6 +22,20 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return {
     title: `${article.title} - צחי חן`,
     description: article.excerpt,
+    alternates: {
+      canonical: `/articles/${id}`,
+    },
+    openGraph: {
+      title: `${article.title} - צחי חן`,
+      description: article.excerpt,
+      url: `https://zachi.co.il/articles/${id}`,
+      type: 'article',
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: `${article.title} - צחי חן`,
+      description: article.excerpt,
+    },
   };
 }
 

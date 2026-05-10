@@ -3,8 +3,22 @@ import CTAButton from '@/components/CTAButton';
 import { BOOK_INFO, CONTACT_INFO, CTA_LABELS } from '@/constants/config';
 
 export const metadata: Metadata = {
-  title: 'הספר - מדייטים לאהבה | צחי חן',
+  title: 'מדייטים לאהבה',
   description: 'ספר מעשי שמפרק את הבחירות הרגשיות, מסביר את הדפוסים החוזרים ומציע דרך ברורה לבחירה בוגרת.',
+  alternates: {
+    canonical: '/book',
+  },
+  openGraph: {
+    title: 'מדייטים לאהבה - ספר על דייטינג וזוגיות',
+    description: 'ספר מעשי שמפרק את הבחירות הרגשיות, מסביר את הדפוסים החוזרים ומציע דרך ברורה לבחירה בוגרת.',
+    url: 'https://zachi.co.il/book',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'מדייטים לאהבה - ספר על דייטינג וזוגיות',
+    description: 'ספר מעשי שמפרק את הבחירות הרגשיות, מסביר את הדפוסים החוזרים ומציע דרך ברורה לבחירה בוגרת.',
+  },
 };
 
 export default function Book() {

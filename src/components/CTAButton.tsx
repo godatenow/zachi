@@ -3,7 +3,7 @@ import Link from 'next/link';
 interface CTAButtonProps {
   href: string;
   label: string;
-  variant?: 'primary' | 'secondary' | 'outline';
+  variant?: 'primary' | 'secondary' | 'outline' | 'ghost';
   className?: string;
   external?: boolean;
 }
@@ -20,7 +20,9 @@ export default function CTAButton({
       ? 'btn-primary'
       : variant === 'secondary'
         ? 'btn-secondary'
-        : 'btn-outline';
+        : variant === 'ghost'
+          ? 'btn-ghost'
+          : 'btn-outline';
 
   const commonClasses = `inline-block text-center font-semibold rounded-lg px-6 py-3 transition-all duration-300 ${className}`;
 
