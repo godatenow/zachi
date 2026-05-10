@@ -39,40 +39,44 @@ export default function Home() {
         <div className="absolute -top-10 right-0 w-80 h-80 bg-[#e6d5c2]/70 rounded-full blur-3xl" />
 
         <div className="container-main relative">
-          <div className="grid gap-20 lg:grid-cols-[1.05fr_0.95fr] items-center">
+          <div className="grid gap-20 lg:grid-cols-[1.08fr_0.92fr] items-center">
             <div className="max-w-2xl lg:max-w-xl">
-              <p className="mb-6 text-sm font-semibold text-[#6b4a34] tracking-[0.16em]">
-                צחי חן | מערכות יחסים, דייטינג וזוגיות
-              </p>
-              <h1 className="text-5xl sm:text-6xl lg:text-[4.8rem] font-semibold text-[#1f1a16] leading-[1.04] tracking-[-0.02em] mb-8">
-                להבין מה באמת
-                <br />
-                מנהל מערכות יחסים.
-              </h1>
-              <p className="text-base sm:text-lg lg:text-xl text-[#4f453d] leading-[1.85] mb-10 max-w-2xl">
-                מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת,
-                <br />
-                בחירות רגשיות והיכולת לבנות קשר בריא לאורך זמן.
-              </p>
+              <div className="relative border-l border-[#8b6e53]/20 pl-8 sm:pl-10">
+                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#6b4a34]">
+                  צחי חן | מערכות יחסים, דייטינג וזוגיות
+                </p>
+                <h1 className="text-5xl sm:text-6xl lg:text-[5.2rem] font-semibold text-[#1f1a16] leading-[0.96] tracking-[-0.04em] mb-8">
+                  להבין מה באמת
+                  <br />
+                  מנהל מערכות יחסים.
+                </h1>
+                <p className="text-base sm:text-lg lg:text-xl text-[#4f453d] leading-[1.9] mb-10 max-w-2xl">
+                  מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת,
+                  <br />
+                  בחירות רגשיות והיכולת לבנות קשר בריא לאורך זמן.
+                </p>
 
-              <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
-                <CTAButton
-                  href="/articles"
-                  label="לקריאת המאמרים"
-                  variant="primary"
-                  className="w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
-                />
-                <CTAButton
-                  href="/about"
-                  label="להכיר את צחי"
-                  variant="ghost"
-                  className="w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
-                />
+                <div className="signature-divider" />
+
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
+                  <CTAButton
+                    href="/articles"
+                    label="לקריאת המאמרים"
+                    variant="primary"
+                    className="w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
+                  />
+                  <CTAButton
+                    href="/about"
+                    label="להכיר את צחי"
+                    variant="ghost"
+                    className="w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
+                  />
+                </div>
               </div>
             </div>
 
-            <div className="relative flex items-center justify-center">
-              <div className="relative w-full max-w-[520px] h-[520px]">
+            <div className="relative flex items-center justify-center lg:justify-end">
+              <div className="relative w-full max-w-[520px] h-[520px] hero-visual">
                 {hasBookMockup ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
@@ -129,7 +133,10 @@ export default function Home() {
                 <br />
                 הפחדים, הדפוסים והבחירות שמעצבים מערכות יחסים מבפנים.
               </h2>
-              <p className="text-lg text-[#4f453d] leading-[1.85] mb-8">
+              <blockquote className="border-l-2 border-[#8b6e53] pl-6 italic text-[#2c2418] leading-[1.8] mb-8 max-w-2xl">
+                “הבחירות הקטנות בשגרה הן אלה שמגדירות את הקשר שלכם.”
+              </blockquote>
+              <p className="text-lg text-[#4f453d] leading-[1.9] mb-8 max-w-2xl">
                 לא טקטיקות. לא משחקים.
                 <br />
                 אלא הבנה אמיתית של מה שמנהל אנשים בתוך קשר.
@@ -166,22 +173,25 @@ export default function Home() {
       </section>
 
       {/* Book Section */}
-      <section className="section-padding bg-[#fdf4eb]">
-        <div className="container-main relative">
+      <section className="section-padding-sm bg-[#fdf4eb]">
+        <div className="container-narrow relative">
           <div className="max-w-3xl">
             <span className="block mb-6 text-sm font-semibold text-[#6b4a34]">
               מדייטים לאהבה
             </span>
-            <h2 className="section-title-left mb-8">
+            <h2 className="section-title-left mb-8 max-w-3xl">
               “מדייטים לאהבה” הוא מדריך מעשי להבנת דפוסים, תקשורת וזוגיות —
               מהדייט הראשון ועד לקשר שנשאר יציב לאורך זמן.
             </h2>
 
-            <ul className="list-disc list-inside space-y-4 text-[#5c4b42] text-lg leading-[1.85] mb-10">
-              <li>למה אתם נמשכים שוב לאותו סוג אנשים</li>
-              <li>איך לזהות דפוסים לפני שהם מנהלים אתכם</li>
-              <li>איך לבנות קשר שלא מבוסס על חרדה ואישור</li>
-            </ul>
+            <p className="text-lg text-[#4f453d] leading-[1.95] mb-10 max-w-2xl">
+              טקסט שמנגיש נושאים מורכבים דרך תובנות אישיות וקרובות, בלי הבטחות ריקות.
+            </p>
+
+            <div className="space-y-4 text-[#5c4b42] text-lg leading-[1.95] mb-10 max-w-2xl">
+              <p>לבנות מערכת יחסים מתוך הבחירות שלכם, לא מתוך פחד או ניחוש.</p>
+              <p>לזהות דפוסים שהופכים חיבור לניסיון לחזור על עצמו.</p>
+            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton
