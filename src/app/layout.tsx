@@ -4,9 +4,9 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 export const metadata: Metadata = {
-  title: 'צחי חן | מאמן יחסים ומחבר "מדייטים לאהבה"',
-  description: 'מלווה אנשים ליצירת קשרים בריאים, בוגרים ויציבים באמצעות כלים מעשיים, בהירות רגשית והבנה של דפוסי בחירה.',
-  keywords: 'צחי חן, מאמן יחסים, מערכות יחסים, דייטים, אהבה, ספר יחסים, בריאות רגשית, בחירה רומנטית, דפוסי יחסים',
+  title: 'צחי חן | מערכות יחסים',
+  description: 'מאמרים וספר על דפוסים, תקשורת ובחירות רגשיות.',
+  keywords: 'צחי חן, מערכות יחסים, דייטים, אהבה, ספר יחסים, בריאות רגשית, בחירה רומנטית, דפוסי יחסים',
   authors: [{ name: 'צחי חן' }],
   creator: 'צחי חן',
   publisher: 'צחי חן',
@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'צחי חן | מאמן יחסים ומחבר "מדייטים לאהבה"',
-    description: 'כלים מעשיים ליחסים בריאים ובחירות רגשיות בוגרות.',
+    title: 'צחי חן | מערכות יחסים',
+    description: 'מאמרים וספר על דפוסים, תקשורת ובחירות רגשיות.',
     url: 'https://zachi.co.il',
     siteName: 'צחי חן',
     locale: 'he_IL',

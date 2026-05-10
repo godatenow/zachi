@@ -4,20 +4,20 @@ import { CONTACT_INFO } from '@/constants/config';
 
 export const metadata: Metadata = {
   title: 'יצירת קשר עם צחי חן',
-  description: 'קבע שיחה או שלח הודעה לצחי חן לקבלת תמיכה בבחירת מערכת יחסים טובה, בוגרת ובריאה.',
+  description: 'שלח הודעה לצחי חן.',
   alternates: {
     canonical: '/contact',
   },
   openGraph: {
-    title: 'יצירת קשר עם צחי חן - מאמן יחסים',
-    description: 'קבע שיחה או שלח הודעה לצחי חן לקבלת תמיכה בבחירת מערכת יחסים טובה, בוגרת ובריאה.',
+    title: 'יצירת קשר עם צחי חן',
+    description: 'שלח הודעה לצחי חן.',
     url: 'https://zachi.co.il/contact',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'יצירת קשר עם צחי חן - מאמן יחסים',
-    description: 'קבע שיחה או שלח הודעה לצחי חן לקבלת תמיכה בבחירת מערכת יחסים טובה, בוגרת ובריאה.',
+    title: 'יצירת קשר עם צחי חן',
+    description: 'שלח הודעה לצחי חן.',
   },
 };
 

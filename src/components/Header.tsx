@@ -14,9 +14,6 @@ export default function Header() {
           <Link href="/" className="text-2xl font-semibold text-[#2c2418] tracking-tight hover:text-[#8b6e53] transition-colors">
             צחי חן
           </Link>
-          <span className="hidden lg:inline-block text-sm text-[#5c4b42] font-medium">
-            מאמן ויועץ למערכות יחסים | מחבר
-          </span>
         </div>
 
         <nav className="hidden lg:flex items-center gap-8 text-base font-medium text-[#2c2418]">

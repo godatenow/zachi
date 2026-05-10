@@ -5,20 +5,20 @@ import { CONTACT_INFO, CTA_LABELS } from '@/constants/config';
 
 export const metadata: Metadata = {
   title: 'אודות צחי חן',
-  description: 'להכיר את הגישה, הניסיון והכוח שמאחורי הליווי של צחי חן בבחירות רומנטיות בוגרות ובריאות.',
+  description: 'על צחי חן והעבודה שלו.',
   alternates: {
     canonical: '/about',
   },
   openGraph: {
-    title: 'אודות צחי חן - מאמן יחסים',
-    description: 'להכיר את הגישה, הניסיון והכוח שמאחורי הליווי של צחי חן בבחירות רומנטיות בוגרות ובריאות.',
+    title: 'אודות צחי חן',
+    description: 'על צחי חן והעבודה שלו.',
     url: 'https://zachi.co.il/about',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'אודות צחי חן - מאמן יחסים',
-    description: 'להכיר את הגישה, הניסיון והכוח שמאחורי הליווי של צחי חן בבחירות רומנטיות בוגרות ובריאות.',
+    title: 'אודות צחי חן',
+    description: 'על צחי חן והעבודה שלו.',
   },
 };
 

@@ -10,21 +10,21 @@ const bookMockupPath = join(process.cwd(), 'public', 'images', 'book-mockup.png'
 const hasBookMockup = existsSync(bookMockupPath);
 
 export const metadata: Metadata = {
-  title: 'צחי חן | מערכות יחסים, דייטינג וזוגיות',
-  description: 'צחי חן | מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת ובחירות רגשיות.',
+  title: 'צחי חן | מערכות יחסים',
+  description: 'מאמרים וספר על דפוסים, תקשורת ובחירות רגשיות.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'צחי חן | מערכות יחסים, דייטינג וזוגיות',
-    description: 'מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת ובחירות רגשיות.',
+    title: 'צחי חן | מערכות יחסים',
+    description: 'מאמרים וספר על דפוסים, תקשורת ובחירות רגשיות.',
     url: 'https://zachi.co.il',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'צחי חן | מערכות יחסים, דייטינג וזוגיות',
-    description: 'מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת ובחירות רגשיות.',
+    title: 'צחי חן | מערכות יחסים',
+    description: 'מאמרים וספר על דפוסים, תקשורת ובחירות רגשיות.',
   },
 };
 
@@ -34,76 +34,77 @@ export default function Home() {
   return (
     <div>
       {/* Premium Hero Section */}
-      <section className="relative overflow-hidden bg-[#fbf1e7]">
+      <section className="relative overflow-hidden bg-[#fbf1e7] min-h-screen flex items-center">
         <div className="absolute inset-0 bg-[#fbf1e7]" />
         <div className="absolute -top-10 right-0 w-80 h-80 bg-[#e6d5c2]/70 rounded-full blur-3xl" />
+        <div className="absolute bottom-0 left-0 w-96 h-96 bg-[#d6b48a]/20 rounded-full blur-3xl" />
 
         <div className="container-main relative">
-          <div className="grid gap-20 lg:grid-cols-[1.08fr_0.92fr] items-center">
-            <div className="max-w-2xl lg:max-w-xl">
-              <div className="relative border-l border-[#8b6e53]/20 pl-8 sm:pl-10">
-                <p className="mb-4 text-xs font-semibold uppercase tracking-[0.28em] text-[#6b4a34]">
-                  צחי חן | מערכות יחסים, דייטינג וזוגיות
-                </p>
-                <h1 className="text-5xl sm:text-6xl lg:text-[5.2rem] font-semibold text-[#1f1a16] leading-[0.96] tracking-[-0.04em] mb-8">
-                  להבין מה באמת
-                  <br />
-                  מנהל מערכות יחסים.
-                </h1>
-                <p className="text-base sm:text-lg lg:text-xl text-[#4f453d] leading-[1.9] mb-10 max-w-2xl">
-                  מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת,
-                  <br />
-                  בחירות רגשיות והיכולת לבנות קשר בריא לאורך זמן.
-                </p>
+          <div className="grid gap-16 lg:grid-cols-[1.2fr_0.8fr] items-center min-h-[80vh]">
+            <div className="max-w-3xl lg:max-w-2xl">
+              <div className="relative">
+                <div className="absolute -left-4 top-0 bottom-0 w-1 bg-[#8b6e53]/30" />
+                <div className="pl-8 sm:pl-12">
+                  <p className="mb-8 text-xs font-semibold uppercase tracking-[0.32em] text-[#6b4a34] opacity-80">
+                    צחי חן
+                  </p>
+                  <h1 className="text-6xl sm:text-7xl lg:text-[6.5rem] font-bold text-[#1f1a16] leading-[0.9] tracking-[-0.06em] mb-16">
+                    להבין מה באמת
+                    <br />
+                    מנהל
+                    <br />
+                    מערכות יחסים.
+                  </h1>
 
-                <div className="signature-divider" />
+                  <div className="signature-divider mb-16" />
 
-                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
-                  <CTAButton
-                    href="/articles"
-                    label="לקריאת המאמרים"
-                    variant="primary"
-                    className="w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
-                  />
-                  <CTAButton
-                    href="/about"
-                    label="להכיר את צחי"
-                    variant="ghost"
-                    className="w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
-                  />
+                  <div className="flex flex-col sm:flex-row items-start gap-6">
+                    <CTAButton
+                      href="/articles"
+                      label="לקריאת המאמרים"
+                      variant="primary"
+                      className="px-10 py-5 text-lg font-semibold"
+                    />
+                    <CTAButton
+                      href="/about"
+                      label="להכיר את צחי"
+                      variant="ghost"
+                      className="px-10 py-5 text-lg"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
 
             <div className="relative flex items-center justify-center lg:justify-end">
-              <div className="relative w-full max-w-[520px] h-[520px] hero-visual">
+              <div className="relative w-full max-w-[600px] h-[600px] hero-visual cinematic-frame">
                 {hasBookMockup ? (
                   /* eslint-disable-next-line @next/next/no-img-element */
                   <img
                     src="/images/book-mockup.png"
                     alt="מדייטים לאהבה - ספר"
-                    className="w-full h-full object-contain rounded-[2rem] shadow-[0_28px_70px_-40px_rgba(44,36,24,0.18)]"
+                    className="w-full h-full object-contain rounded-[2.5rem] shadow-[0_32px_80px_-50px_rgba(44,36,24,0.25)]"
                   />
                 ) : (
-                  <div className="relative h-full w-full">
-                    <div className="absolute -right-10 -top-10 w-60 h-80 rounded-[2.5rem] bg-[#e6d5c2] shadow-[0_30px_70px_-44px_rgba(44,36,24,0.16)]" />
-                    <div className="absolute left-0 top-0 w-full h-full rounded-[2.5rem] bg-[#fbf3ec] shadow-[0_30px_70px_-40px_rgba(44,36,24,0.16)] border border-[#e6d2bb]/60 overflow-hidden">
-                      <div className="absolute left-8 top-8 w-16 h-16 rounded-full bg-[#d6b48a]/25" />
-                      <div className="absolute left-10 top-10 w-24 h-1.5 rounded-full bg-[#d6b48a]" />
-                      <div className="absolute left-10 top-16 w-32 h-1.5 rounded-full bg-[#d6b48a]" />
-                      <div className="absolute inset-x-10 top-28 bottom-16 rounded-[1.75rem] bg-[#f4e8dd] p-8 flex flex-col justify-between">
-                        <div>
-                          <p className="text-sm uppercase tracking-[0.22em] text-[#6b4a34] mb-4">מדייטים לאהבה</p>
-                          <h2 className="text-3xl sm:text-4xl font-semibold text-[#2c2418] leading-[1.05]">
-                            מדריך מעשי להבנת דפוסים, תקשורת וזוגיות.
-                          </h2>
-                        </div>
-                        <div className="space-y-3 text-sm text-[#5c4b42] leading-[1.8]">
-                          <p>מהדייט הראשון ועד לקשר שנשאר יציב לאורך זמן.</p>
-                        </div>
+                  <div className="relative h-full w-full rounded-[2.5rem] bg-gradient-to-br from-[#fff9f2] to-[#f8f0e4] shadow-[0_32px_80px_-50px_rgba(44,36,24,0.25)] border border-[#e6d2bb]/40 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#f4e8dd]/60 via-transparent to-[#fff9f2]/40" />
+                    <div className="absolute left-12 top-12 w-20 h-20 rounded-full bg-[#d6b48a]/20" />
+                    <div className="absolute left-16 top-16 w-32 h-2 rounded-full bg-[#d6b48a]/60" />
+                    <div className="absolute left-16 top-24 w-28 h-2 rounded-full bg-[#d6b48a]/40" />
+                    <div className="absolute inset-x-16 top-40 bottom-20 rounded-[2rem] bg-[#f4e8dd]/80 p-10 flex flex-col justify-between">
+                      <div>
+                        <p className="text-base uppercase tracking-[0.24em] text-[#6b4a34] mb-6 font-semibold">מדייטים לאהבה</p>
+                        <h2 className="text-4xl sm:text-5xl font-bold text-[#2c2418] leading-[1.02] mb-6">
+                          מדריך מעשי להבנת דפוסים,
+                          <br />
+                          תקשורת וזוגיות.
+                        </h2>
+                        <p className="text-base text-[#5c4b42] leading-[1.7] max-w-sm">
+                          מהדייט הראשון ועד לקשר שנשאר יציב לאורך זמן.
+                        </p>
                       </div>
-                      <div className="absolute bottom-8 left-10 right-10 h-1 rounded-full bg-[#d6b48a]/40" />
                     </div>
+                    <div className="absolute bottom-12 left-16 right-16 h-1.5 rounded-full bg-[#d6b48a]/50" />
                   </div>
                 )}
               </div>
@@ -121,10 +122,10 @@ export default function Home() {
       </section>
 
       {/* About Zachi Section */}
-      <section className="section-padding bg-[#f7eee5]">
+      <section className="section-padding bg-[#f7eee5] texture-overlay">
         <div className="container-main">
           <div className="grid gap-16 lg:grid-cols-[0.95fr_1.05fr] items-center">
-            <div className="max-w-3xl">
+            <div className="max-w-3xl animate-fade-in-up">
               <span className="mb-6 text-sm font-semibold text-[#6b4a34] tracking-[0.16em] block">
                 על צחי
               </span>
@@ -133,21 +134,17 @@ export default function Home() {
                 <br />
                 הפחדים, הדפוסים והבחירות שמעצבים מערכות יחסים מבפנים.
               </h2>
-              <blockquote className="border-l-2 border-[#8b6e53] pl-6 italic text-[#2c2418] leading-[1.8] mb-8 max-w-2xl">
+              <blockquote className="quote-block mb-10 max-w-2xl">
                 “הבחירות הקטנות בשגרה הן אלה שמגדירות את הקשר שלכם.”
               </blockquote>
-              <p className="text-lg text-[#4f453d] leading-[1.9] mb-8 max-w-2xl">
-                לא טקטיקות. לא משחקים.
-                <br />
-                אלא הבנה אמיתית של מה שמנהל אנשים בתוך קשר.
-              </p>
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <CTAButton href="/about" label="לקרוא עוד על צחי" variant="outline" />
                 <CTAButton href={CONTACT_INFO.whatsapp} label="להתחיל לבחור אחרת" variant="primary" external />
               </div>
             </div>
 
-            <div className="relative mx-auto max-w-md">
+            <div className="relative mx-auto max-w-md animate-subtle-float">
               <div className="rounded-[2rem] bg-[#e8ddd1] p-10 shadow-[0_18px_40px_-24px_rgba(44,36,24,0.12)]">
                 <div className="text-[#2c2418] space-y-6">
                   <p className="text-sm uppercase tracking-[0.22em] text-[#6b4a34]">צחי חן</p>
@@ -162,36 +159,28 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-[#fbf1e7]">
-        <div className="container-main max-w-4xl mx-auto text-center">
-          <p className="text-2xl sm:text-3xl lg:text-4xl text-[#4f453d] leading-[1.4] md:leading-[1.3] mb-4">
-            אנשים לא מתאהבים בשיחות נעימות.
-            <br />
-            הם מתאהבים בהרגשה ששיחה מייצרת.
-          </p>
+      <section className="section-padding-sm bg-[#fbf1e7]">
+        <div className="container-narrow">
+          <div className="max-w-4xl mx-auto text-center">
+            <blockquote className="quote-block max-w-3xl mx-auto">
+              אנשים לא מתאהבים בשיחות נעימות.
+              <br />
+              הם מתאהבים בהרגשה ששיחה מייצרת.
+            </blockquote>
+          </div>
         </div>
       </section>
 
       {/* Book Section */}
-      <section className="section-padding-sm bg-[#fdf4eb]">
+      <section className="section-padding-sm bg-[#fdf4eb] texture-overlay">
         <div className="container-narrow relative">
-          <div className="max-w-3xl">
+          <div className="max-w-3xl animate-fade-in-up">
             <span className="block mb-6 text-sm font-semibold text-[#6b4a34]">
               מדייטים לאהבה
             </span>
             <h2 className="section-title-left mb-8 max-w-3xl">
-              “מדייטים לאהבה” הוא מדריך מעשי להבנת דפוסים, תקשורת וזוגיות —
-              מהדייט הראשון ועד לקשר שנשאר יציב לאורך זמן.
+              מדריך להבנת דפוסים, תקשורת וזוגיות.
             </h2>
-
-            <p className="text-lg text-[#4f453d] leading-[1.95] mb-10 max-w-2xl">
-              טקסט שמנגיש נושאים מורכבים דרך תובנות אישיות וקרובות, בלי הבטחות ריקות.
-            </p>
-
-            <div className="space-y-4 text-[#5c4b42] text-lg leading-[1.95] mb-10 max-w-2xl">
-              <p>לבנות מערכת יחסים מתוך הבחירות שלכם, לא מתוך פחד או ניחוש.</p>
-              <p>לזהות דפוסים שהופכים חיבור לניסיון לחזור על עצמו.</p>
-            </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
               <CTAButton
@@ -210,96 +199,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What You'll Get */}
-      <section className="section-padding bg-white">
-        <div className="container-main">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="section-title mb-6">
-              מה תקבלו כאן
-            </h2>
-            <p className="section-subtitle text-[#5c4b42]">
-              כאן תמצאו שפה וכלים שיעזרו לכם להבין מה חוזר על עצמו בקשרים שלכם — ומה אפשר לעשות אחרת.
-            </p>
-          </div>
-
-          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
-            <div className="insight-card text-center">
-              <div className="mx-auto mb-6 h-1.5 w-14 rounded-full bg-[#d6b48a]"></div>
-              <h3 className="text-xl font-semibold text-[#2c2418] mb-4">בהירות</h3>
-              <p className="text-sm text-[#5c4b42] leading-[1.75]">
-                להבין מה מפעיל את המשיכה שלכם, ומה משמר את הקשר. כלים שמביאים בהירות אמיתית, לא תשובות קלות.
-              </p>
-            </div>
-            <div className="insight-card text-center">
-              <div className="mx-auto mb-6 h-1.5 w-14 rounded-full bg-[#d6b48a]"></div>
-              <h3 className="text-xl font-semibold text-[#2c2418] mb-4">כלים מעשיים</h3>
-              <p className="text-sm text-[#5c4b42] leading-[1.75]">
-                כלים לשיחה, לדייטים, להצבת גבולות ולקבלת החלטות רגשיות בצורה נקייה יותר.
-              </p>
-            </div>
-            <div className="insight-card text-center">
-              <div className="mx-auto mb-6 h-1.5 w-14 rounded-full bg-[#d6b48a]"></div>
-              <h3 className="text-xl font-semibold text-[#2c2418] mb-4">הבנה של דפוסים</h3>
-              <p className="text-sm text-[#5c4b42] leading-[1.75]">
-                לזהות דפוסים שממשיכים להרוס בחירות ולהוציא אתכם מהמסלול. ללמוד מה שחוזר על עצמו כדי לשנות.
-              </p>
-            </div>
-            <div className="insight-card text-center">
-              <div className="mx-auto mb-6 h-1.5 w-14 rounded-full bg-[#d6b48a]"></div>
-              <h3 className="text-xl font-semibold text-[#2c2418] mb-4">דרך לבחירה בוגרת</h3>
-              <p className="text-sm text-[#5c4b42] leading-[1.75]">
-                כדי לבחור מתוך עוצמה פנימית ולא מתוך פחד או שכנוע. לבנות קשרים שמחזיקים מעמד לאורך זמן.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Who is this for */}
-      <section className="section-padding bg-gradient-to-br from-[#faf2e8] via-[#f8f0e4] to-[#f0e6d6]">
-        <div className="container-main">
-          <div className="max-w-4xl mx-auto text-center mb-12">
-            <h2 className="section-title mb-6">
-              למי האתר מתאים
-            </h2>
-            <p className="section-subtitle text-[#5c4b42]">
-              מי שמוכן לקחת אחריות על הבחירות שלו, ומבין שההחלטות הרגשיות החשובות ביותר הן אלה שמתנהלות גם אחרי הצעדים הראשונים.
-            </p>
-          </div>
-
-          <div className="grid gap-10 md:grid-cols-3">
-            <div className="story-card border-l-4 border-l-[#8b6e53]">
-              <h3 className="text-2xl font-semibold text-[#2c2418] mb-4">רווקים ורווקות</h3>
-              <p className="text-[#5c4b42] leading-[1.7]">
-                מי שמרגישים שהם מתאמצים מדי, נמשכים למי שלא פנוי אליהם, או מתקשים להבין מתי קשר באמת נכון.
-              </p>
-            </div>
-            <div className="story-card border-l-4 border-l-[#8b6e53]">
-              <h3 className="text-2xl font-semibold text-[#2c2418] mb-4">גרושים וגרושות</h3>
-              <p className="text-[#5c4b42] leading-[1.7]">
-                מי שחוזרים לעולם הדייטינג ורוצים לבנות בחירה חדשה מתוך ניסיון, בהירות ובשלות.
-              </p>
-            </div>
-            <div className="story-card border-l-4 border-l-[#8b6e53]">
-              <h3 className="text-2xl font-semibold text-[#2c2418] mb-4">אנשים בתוך קשר</h3>
-              <p className="text-[#5c4b42] leading-[1.7]">
-                מי שרוצה לעבוד על הקשר שלו אחרי הריגוש, ולהפוך אותו ליציב יותר גם בימים רגילים.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Articles Preview */}
       <section className="section-padding bg-white">
         <div className="container-main">
-          <div className="max-w-4xl mx-auto text-center mb-12">
+          <div className="max-w-4xl mx-auto text-center mb-12 animate-fade-in-up">
             <h2 className="section-title mb-6">
               מתוך הספר
             </h2>
-            <p className="section-subtitle text-[#5c4b42]">
-              מאמרים קצרים על דפוסים, תקשורת ובחירות רגשיות — בשפה פשוטה, ישירה ומעשית.
-            </p>
           </div>
 
           <div className="grid gap-10 md:grid-cols-2">
@@ -318,27 +224,6 @@ export default function Home() {
 
           <div className="text-center mt-10">
             <CTAButton href="/articles" label="לקריאת כל המאמרים" variant="primary" />
-          </div>
-        </div>
-      </section>
-
-      {/* Final CTA */}
-      <section className="section-padding bg-gradient-to-br from-[#2c2418] via-[#241e18] to-[#1f1913] text-white relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-t from-[#1a140e]/30 via-transparent to-[#2c2418]/20" />
-        <div className="absolute top-20 left-20 w-80 h-80 bg-gradient-to-tr from-[#8b6e53]/10 to-transparent rounded-full blur-3xl" />
-        <div className="container-narrow relative text-center">
-          <h2 className="section-title text-white mb-8">
-            אולי הגיע הזמן
-            <br />
-            להתחיל להבין את הדפוסים —
-            <br />
-            ולא רק את התוצאות.
-          </h2>
-          <p className="text-lg text-[#d4b48b] leading-[1.6] mb-12 max-w-2xl mx-auto">
-            לא עוד טיפים. לא עוד הבטחות. התחלה של שפה שמאפשרת לכם לבחור אחרת.
-          </p>
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <CTAButton href="/articles" label="לקריאת המאמרים" variant="primary" />
           </div>
         </div>
       </section>

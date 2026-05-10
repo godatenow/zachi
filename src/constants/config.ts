@@ -3,10 +3,10 @@
 export const SITE_CONFIG = {
   name: 'צחי חן',
   nameEn: 'Zachi Hen',
-  title: 'מאמן ויועץ למערכות יחסים',
-  titleEn: 'Relationship Coach & Advisor',
-  description: 'מדריך לדייטים, אהבה, קשרים בריאים וגדילה אישית',
-  descriptionEn: 'Guide to dating, love, healthy relationships and personal growth',
+  title: 'על מערכות יחסים',
+  titleEn: 'On Relationships',
+  description: 'מאמרים וספר על דפוסים, תקשורת ובחירות רגשיות',
+  descriptionEn: 'Articles and book on patterns, communication and emotional choices',
 };
 
 export const CONTACT_INFO = {
@@ -44,9 +44,9 @@ export const NAVIGATION_LINKS = [
 ];
 
 export const CTA_LABELS = {
-  scheduleCall: 'לתיאום שיחה',
+  scheduleCall: 'לשיחה',
   buyBook: 'לרכישת הספר',
   readArticles: 'לקריאת מאמרים',
-  contactUs: 'צרו איתנו קשר',
+  contactUs: 'יצירת קשר',
   sendMessage: 'שליחת הודעה',
 };
