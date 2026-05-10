@@ -45,9 +45,7 @@ export default function Home() {
                 מדייטים לאהבה
               </p>
               <h1 className="text-5xl sm:text-6xl lg:text-[4.8rem] font-semibold text-[#1f1a16] leading-[1.04] tracking-[-0.02em] mb-8">
-                אתם לא מפחדים שיעזבו אתכם.
-                <br />
-                אתם מפחדים שיישארו.
+                להבין מה באמת מנהל מערכות יחסים
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-[#4f453d] leading-[1.85] mb-10 max-w-2xl">
                 רוב האנשים לא נכשלים בזוגיות בגלל חוסר אהבה.
