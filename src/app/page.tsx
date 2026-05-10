@@ -10,21 +10,21 @@ const bookMockupPath = join(process.cwd(), 'public', 'images', 'book-mockup.png'
 const hasBookMockup = existsSync(bookMockupPath);
 
 export const metadata: Metadata = {
-  title: 'דף הבית',
-  description: 'צחי חן - מאמן יחסים ומחבר הספר "מדייטים לאהבה". כלים מעשיים לדייטינג בריא, בחירה זוגית מודעת וזוגיות יציבה.',
+  title: 'צחי חן | מערכות יחסים, דייטינג וזוגיות',
+  description: 'צחי חן | מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת ובחירות רגשיות.',
   alternates: {
     canonical: '/',
   },
   openGraph: {
-    title: 'צחי חן - מאמן יחסים ומחבר "מדייטים לאהבה"',
-    description: 'כלים מעשיים לדייטינג בריא, בחירה זוגית מודעת וזוגיות יציבה.',
+    title: 'צחי חן | מערכות יחסים, דייטינג וזוגיות',
+    description: 'מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת ובחירות רגשיות.',
     url: 'https://zachi.co.il',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'צחי חן - מאמן יחסים ומחבר "מדייטים לאהבה"',
-    description: 'כלים מעשיים לדייטינג בריא, בחירה זוגית מודעת וזוגיות יציבה.',
+    title: 'צחי חן | מערכות יחסים, דייטינג וזוגיות',
+    description: 'מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת ובחירות רגשיות.',
   },
 };
 
@@ -42,23 +42,23 @@ export default function Home() {
           <div className="grid gap-20 lg:grid-cols-[1.05fr_0.95fr] items-center">
             <div className="max-w-2xl lg:max-w-xl">
               <p className="mb-6 text-sm font-semibold text-[#6b4a34] tracking-[0.16em]">
-                מדייטים לאהבה
+                צחי חן | מערכות יחסים, דייטינג וזוגיות
               </p>
               <h1 className="text-5xl sm:text-6xl lg:text-[4.8rem] font-semibold text-[#1f1a16] leading-[1.04] tracking-[-0.02em] mb-8">
-                להבין מה באמת מנהל מערכות יחסים
+                להבין מה באמת
+                <br />
+                מנהל מערכות יחסים.
               </h1>
               <p className="text-base sm:text-lg lg:text-xl text-[#4f453d] leading-[1.85] mb-10 max-w-2xl">
-                רוב האנשים לא נכשלים בזוגיות בגלל חוסר אהבה.
+                מאמרים, ספר ותוכן מעשי על דפוסים, תקשורת,
                 <br />
-                הם נכשלים ברגעים שבהם פחד, קרבה, שתיקה ודפוסים מתחילים לנהל את הקשר במקומם.
-                <br />
-                “מדייטים לאהבה” הוא לא עוד ספר על דייטים — אלא מפה מעשית לבניית קשר אמיתי.
+                בחירות רגשיות והיכולת לבנות קשר בריא לאורך זמן.
               </p>
 
               <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 mb-10">
                 <CTAButton
                   href="/articles"
-                  label="להתחיל לקרוא"
+                  label="לקריאת המאמרים"
                   variant="primary"
                   className="w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
                 />
@@ -69,10 +69,6 @@ export default function Home() {
                   className="w-full sm:w-auto px-8 py-4 text-base sm:text-lg"
                 />
               </div>
-
-              <p className="text-sm text-[#6f6258] max-w-xl">
-                מילה אחת ברורה יותר מסט כלים ריקים.
-              </p>
             </div>
 
             <div className="relative flex items-center justify-center">
@@ -95,12 +91,11 @@ export default function Home() {
                         <div>
                           <p className="text-sm uppercase tracking-[0.22em] text-[#6b4a34] mb-4">מדייטים לאהבה</p>
                           <h2 className="text-3xl sm:text-4xl font-semibold text-[#2c2418] leading-[1.05]">
-                            ספר על פחדים, דפוסים ובחירות שמנהלות את הזוגיות שלכם.
+                            מדריך מעשי להבנת דפוסים, תקשורת וזוגיות.
                           </h2>
                         </div>
                         <div className="space-y-3 text-sm text-[#5c4b42] leading-[1.8]">
-                          <p>ספר שעוזר להבחין בין דחף לרצון אמיתי.</p>
-                          <p>כלים לעבודה עם עצמך, לפני שאתה מחפש תשובות אצל האחר.</p>
+                          <p>מהדייט הראשון ועד לקשר שנשאר יציב לאורך זמן.</p>
                         </div>
                       </div>
                       <div className="absolute bottom-8 left-10 right-10 h-1 rounded-full bg-[#d6b48a]/40" />
@@ -130,17 +125,14 @@ export default function Home() {
                 על צחי
               </span>
               <h2 className="section-title-left mb-8">
-                הספר הזה נולד מתוך שנים של שיחות אמיתיות עם אנשים שניסו להבין למה משהו שוב ושוב נשבר להם בידיים — גם כשהם רצו אהבה באמת.
+                העבודה שלי עוסקת ברגעים שבדרך כלל לא מדברים עליהם:
+                <br />
+                הפחדים, הדפוסים והבחירות שמעצבים מערכות יחסים מבפנים.
               </h2>
-              <p className="text-lg text-[#4f453d] leading-[1.85] mb-6">
-                אבל הוא נולד גם מתוך הסיפור האישי שלי.
-                <br />
-                מתוך ההבנה שאפשר לעשות הכול ‘נכון’ ועדיין לא להיות באמת נוכח בתוך קשר.
-              </p>
               <p className="text-lg text-[#4f453d] leading-[1.85] mb-8">
-                אני לא מאמין בטקטיקות.
+                לא טקטיקות. לא משחקים.
                 <br />
-                אני מאמין ביכולת לזהות את הדפוסים שמנהלים אותנו — רגע לפני שהם שוב בוחרים בשבילנו.
+                אלא הבנה אמיתית של מה שמנהל אנשים בתוך קשר.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
                 <CTAButton href="/about" label="לקרוא עוד על צחי" variant="outline" />
@@ -181,13 +173,9 @@ export default function Home() {
               מדייטים לאהבה
             </span>
             <h2 className="section-title-left mb-8">
-              הספר הזה לא יבטיח לכם אהבה תוך 30 יום.
+              “מדייטים לאהבה” הוא מדריך מעשי להבנת דפוסים, תקשורת וזוגיות —
+              מהדייט הראשון ועד לקשר שנשאר יציב לאורך זמן.
             </h2>
-            <p className="text-lg text-[#4f453d] leading-[1.85] mb-8 max-w-2xl">
-              הוא נותן לכם משהו שימושי הרבה יותר:
-              <br />
-              כלים לבחור נכון, לעזוב בזמן, ולבנות קשר שמחזיק מעמד גם כשהפחד עולה.
-            </p>
 
             <ul className="list-disc list-inside space-y-4 text-[#5c4b42] text-lg leading-[1.85] mb-10">
               <li>למה אתם נמשכים שוב לאותו סוג אנשים</li>
