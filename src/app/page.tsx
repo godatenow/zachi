@@ -208,7 +208,7 @@ export default function Home() {
               מה תקבלו כאן
             </h2>
             <p className="section-subtitle text-[#5c4b42]">
-              אני מציע לא רק תיאוריות. האתר הזה מוביל אתכם לכלים מעשיים, לדיוק ברגשות ולבחירות שמרגישות נכונות גם אחרי כמה חודשים.
+              כאן תמצאו שפה וכלים שיעזרו לכם להבין מה חוזר על עצמו בקשרים שלכם — ומה אפשר לעשות אחרת.
             </p>
           </div>
 
@@ -224,7 +224,7 @@ export default function Home() {
               <div className="mx-auto mb-6 h-1.5 w-14 rounded-full bg-[#d6b48a]"></div>
               <h3 className="text-xl font-semibold text-[#2c2418] mb-4">כלים מעשיים</h3>
               <p className="text-sm text-[#5c4b42] leading-[1.75]">
-                התערבויות ברורות לשיחה, לדייטים ואף להחלטות חזרה אחריות. כלים שעובדים כי הם נבנו מתוך ניסיון.
+                כלים לשיחה, לדייטים, להצבת גבולות ולקבלת החלטות רגשיות בצורה נקייה יותר.
               </p>
             </div>
             <div className="insight-card text-center">
@@ -288,7 +288,7 @@ export default function Home() {
               מתוך הספר
             </h2>
             <p className="section-subtitle text-[#5c4b42]">
-              טקסט שנשאר קרוב לעולם הרגשי והאינטלקטואלי של הספר.
+              מאמרים קצרים על דפוסים, תקשורת ובחירות רגשיות — בשפה פשוטה, ישירה ומעשית.
             </p>
           </div>
 

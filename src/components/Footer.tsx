@@ -13,7 +13,7 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-3xl font-semibold text-white tracking-tight">צחי חן</h3>
             <p className="max-w-md text-base leading-[1.6] text-soft-gold">
-              מאמן ויועץ למערכות יחסים, מחבר ומלווה לאנשים שמחפשים לבנות מערכת יחסים משמעותית עם בחירות חכמות. אני מאמין שכל בחירה רומנטית היא הזדמנות לצמיחה אמיתית.
+              עוזר לאנשים להבין דפוסים, לדייק בחירות ולבנות קשרים יציבים יותר.
             </p>
             <p className="text-soft-gold/80 italic text-sm leading-[1.5]">
               &ldquo;הקשרים הטובים ביותר נבנים מתוך בחירה מודעת, לא מתוך תשוקה חולפת.&rdquo;
