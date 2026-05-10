@@ -89,11 +89,11 @@ img {
   }
 
   .section-padding {
-    @apply py-20 sm:py-24 lg:py-28 xl:py-32;
+    @apply py-16 sm:py-20 lg:py-24 xl:py-28;
   }
 
   .section-padding-sm {
-    @apply py-16 sm:py-20 lg:py-24;
+    @apply py-12 sm:py-16 lg:py-20;
   }
 
   .section-title {

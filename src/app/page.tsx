@@ -212,18 +212,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="section-padding bg-[#fbf1e7]">
-        <div className="container-main max-w-4xl mx-auto text-center">
-          <p className="text-2xl sm:text-3xl lg:text-4xl text-[#4f453d] leading-[1.4] md:leading-[1.3] mb-4">
-            מערכת ההישרדות לא רוצה אהבה. היא רוצה הגנה.
-          </p>
-        </div>
-      </section>
-
       {/* What You'll Get */}
       <section className="section-padding bg-white">
         <div className="container-main">
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="section-title mb-6">
               מה תקבלו כאן
             </h2>
@@ -232,7 +224,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
             <div className="insight-card text-center">
               <div className="mx-auto mb-6 h-1.5 w-14 rounded-full bg-[#d6b48a]"></div>
               <h3 className="text-xl font-semibold text-[#2c2418] mb-4">בהירות</h3>
@@ -268,7 +260,7 @@ export default function Home() {
       {/* Who is this for */}
       <section className="section-padding bg-gradient-to-br from-[#faf2e8] via-[#f8f0e4] to-[#f0e6d6]">
         <div className="container-main">
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="section-title mb-6">
               למי האתר מתאים
             </h2>
@@ -277,7 +269,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-3">
+          <div className="grid gap-10 md:grid-cols-3">
             <div className="story-card border-l-4 border-l-[#8b6e53]">
               <h3 className="text-2xl font-semibold text-[#2c2418] mb-4">רווקים ורווקות</h3>
               <p className="text-[#5c4b42] leading-[1.7]">
@@ -303,7 +295,7 @@ export default function Home() {
       {/* Articles Preview */}
       <section className="section-padding bg-white">
         <div className="container-main">
-          <div className="max-w-4xl mx-auto text-center mb-16">
+          <div className="max-w-4xl mx-auto text-center mb-12">
             <h2 className="section-title mb-6">
               מתוך הספר
             </h2>
@@ -312,7 +304,7 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-8 md:grid-cols-2">
+          <div className="grid gap-10 md:grid-cols-2">
             {recentArticles.map((article) => (
               <ArticleCard
                 key={article.id}
@@ -326,19 +318,9 @@ export default function Home() {
             ))}
           </div>
 
-          <div className="text-center mt-12">
+          <div className="text-center mt-10">
             <CTAButton href="/articles" label="לקריאת כל המאמרים" variant="primary" />
           </div>
-        </div>
-      </section>
-
-      <section className="section-padding bg-[#fbf1e7]">
-        <div className="container-main max-w-4xl mx-auto text-center">
-          <p className="text-2xl sm:text-3xl lg:text-4xl text-[#4f453d] leading-[1.4] md:leading-[1.3] mb-4">
-            אתם לא עומדים למשפט.
-            <br />
-            אתם בוחרים.
-          </p>
         </div>
       </section>
 
@@ -348,15 +330,17 @@ export default function Home() {
         <div className="absolute top-20 left-20 w-80 h-80 bg-gradient-to-tr from-[#8b6e53]/10 to-transparent rounded-full blur-3xl" />
         <div className="container-narrow relative text-center">
           <h2 className="section-title text-white mb-8">
-            אולי הגיע הזמן להבין
+            אולי הגיע הזמן
             <br />
-            למה זה ממשיך לחזור.
+            להתחיל להבין את הדפוסים —
+            <br />
+            ולא רק את התוצאות.
           </h2>
           <p className="text-lg text-[#d4b48b] leading-[1.6] mb-12 max-w-2xl mx-auto">
             לא עוד טיפים. לא עוד הבטחות. התחלה של שפה שמאפשרת לכם לבחור אחרת.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <CTAButton href={CONTACT_INFO.whatsapp} label="להתחיל לבחור אחרת" variant="primary" external />
+            <CTAButton href="/articles" label="לקריאת המאמרים" variant="primary" />
           </div>
         </div>
       </section>
